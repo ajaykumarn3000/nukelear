@@ -1,6 +1,6 @@
 <div align="center">
 
-# NukeIt 🚀
+# NukeIt 💣
 
 [![npm version](https://badge.fury.io/js/nukeit.svg)](https://www.npmjs.com/package/nukeit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,246 +9,156 @@
 [![GitHub forks](https://img.shields.io/github/forks/ajaykumarn3000/nukeit)](https://github.com/ajaykumarn3000/nukeit/network)
 [![GitHub contributors](https://img.shields.io/github/contributors/ajaykumarn3000/nukeit)](https://github.com/ajaykumarn3000/nukeit/graphs/contributors)
 
+**Recursively delete package files and dependencies from nested project
+folders.**
+
+[⭐ Star on GitHub](https://github.com/ajaykumarn3000/nukeit) •
+[🐛 Report Bug](https://github.com/ajaykumarn3000/nukeit/issues) •
+[💡 Request Feature](https://github.com/ajaykumarn3000/nukeit/discussions) •
+[🤝 Contribute](https://github.com/ajaykumarn3000/nukeit/blob/main/CONTRIBUTING.md)
+
 </div>
 
-> The best way to get started with Next.js and React projects.
+---
 
-NukeIt is a powerful, open-source CLI tool that scaffolds modern web
-applications with industry-standard development tools and configurations. Built
-for developers, by developers, to streamline the project setup process and
-enforce best practices from day one.
+## 🎯 What is NukeIt?
 
-<!-- ## 🌟 Why NukeIt?
+NukeIt is a powerful CLI tool designed to help developers reclaim disk storage
+by efficiently deleting unwanted package files and dependency folders from
+nested project structures.
 
-In the fast-paced world of web development, setting up a new project with all
-the necessary tools and configurations can be time-consuming and error-prone.
-NukeIt solves this by providing:
+### The Problem
 
-- **Zero Configuration**: Get started immediately with sensible, battle-tested
-  defaults
-- **Best Practices**: Industry-standard tools and configurations out of the box
-- **Developer Experience**: Consistent setup across teams and projects
-- **Modern Stack**: Latest versions of popular tools and frameworks
-- **Flexibility**: Choose only the tools you need for your project
+If you have a large, nested development folder structure (like `Dev/` containing
+multiple stack-specific subfolders - `python/`, `nodejs/`, `nextjs/`, etc.) and
+install libraries/packages for development or demonstration, those
+`node_modules` directories, Python `venv`, and other dependency folders can
+consume **gigabytes** of storage over time. Manually tracking and deleting these
+folders from hundreds of projects is tedious and error-prone.
+
+### The Solution
+
+NukeIt scans your entire development folder structure and lets you selectively
+delete package files and dependency directories from all projects in one
+command. No more forgotten `node_modules` sitting around for months or years.
+
+---
 
 ## ✨ Features
 
-- 🎯 **Framework Support**: Next.js and React (with Vite)
-- 📝 **TypeScript Ready**: Full TypeScript support out of the box
-- 🎨 **Styling**: Tailwind CSS integration
-- ✅ **Code Quality**: ESLint, Prettier, and Commitlint pre-configured
-- 🔧 **Git Hooks**: Husky for automated code quality checks
-- 🚀 **Zero Configuration**: Get started immediately with sensible defaults
-- 📦 **Modern Tooling**: Latest versions of all dependencies -->
+- 🎯 **Recursive Scanning** - Finds and deletes unwanted files across deeply
+  nested project structures
+- 📦 **Multi-Technology Support** - Delete dependencies for Python, Node.js,
+  Next.js, VSCode, and macOS
+- 🖥️ **Interactive TUI** - User-friendly terminal interface for selecting what
+  to delete
+- ⚡ **Bulk Operations** - Clean up multiple projects with a single command
+- 🛡️ **Safe by Default** - Review selections before confirming deletion
+- 🚀 **Zero Configuration** - Works out of the box with sensible defaults
+
+---
 
 ## 🚀 Quick Start
 
 ### Using npx (Recommended)
 
 ```bash
-npx nukeit@latest
+npx nukeit@latest <directory>
 ```
+
+Replace `<directory>` with the path to your root development folder.
+
+### Install Globally
 
 ```bash
 npm install -g nukeit
-nukeit
+nukeit <directory>
 ```
 
 ### System Requirements
 
 - **Node.js**: 18.0 or higher
 - **npm**: 7.0 or higher (or **yarn**/**pnpm** equivalent)
-- **Git**: For version control (recommended)
 
-## 🛠️ What You Get
+---
 
-### Frameworks
+## 📖 Usage
 
-- **Next.js** - Full-stack React framework with App Router
-- **React** - Modern React with Vite for fast development
+### Interactive Mode (Recommended)
 
-### Development Tools
-
-- **TypeScript** - Type-safe JavaScript development
-- **Tailwind CSS** - Utility-first CSS framework
-- **Prettier** - Opinionated code formatter
-- **ESLint** - JavaScript/TypeScript linter
-- **Commitlint + Husky** - Enforce conventional commit messages
-
-## 📋 Usage
-
-### Interactive (Prompts)
-
-When you run NukeIt without flags, you'll be prompted to:
-
-1. **Project Name**: Enter your project name (lowercase, no spaces)
-2. **Framework**: Choose between Next.js or React
-3. **TypeScript**: Enable/disable TypeScript support
-4. **Dev Tools**: Select from Tailwind CSS, Prettier, and Husky+Commitlint
+When you run NukeIt without specifying technologies, you'll be presented with an
+interactive interface:
 
 ```bash
-$ npx nukeit@latest
+$ npx nukeit ~/Dev
 
-Welcome to NukeIt v3.0.0
-
-✔ Enter the project name › my-awesome-app
-✔ Select a framework › Next.js
-✔ Do you want to use TypeScript? › Yes
-✔ Select dev tools › Tailwind CSS, Prettier, Husky
-
+┌  nukeit
+│
+◇  Select technologies to nuke:
+│  ◈ Node.js (node_modules, dist, build)
+│  ◈ Python (venv, .venv, __pycache__)
+│  ◈ Next.js (.next, node_modules, dist, build)
+│  ◈ VSCode (.vscode)
+│  ◈ macOS (.DS_Store)
+│
+◇  Confirm deletion?
+│  This will permanently delete the selected directories.
 ```
 
-### Non-Interactive (Flags)
+### Non-Interactive Mode (Flags)
 
-Skip all prompts by providing options via flags. This is CI-friendly and great
-for automation.
-
-Examples:
+Skip all prompts by specifying technologies via flags:
 
 ```bash
+# Delete only Node.js dependencies
+nukeit ~/Dev --node
 
-# Next.js + TypeScript with recommended tools (Tailwind, Prettier, Commitlint)
-npx nukeit my-app --next --ts --tools
+# Delete multiple technologies at once
+nukeit ~/Dev --node --python
 
-# React + JavaScript with no dev tools and no git init
-npx nukeit my-app --react --js --no-tools --no-git
-
-# React + TypeScript with only Tailwind and Prettier
-npx nukeit my-app --react --ts --tailwind --prettier
-
+# Delete everything
+nukeit ~/Dev --node --next --python --vscode --macos
 ```
 
-Note:
+---
 
-- Do not combine framework flags together: use either `--next` or `--react`.
-- Do not combine language flags together: use either `--ts` or `--js`.
-- If you don't pass `--tools`, you can choose tools individually with
-  `--tailwind`, `--prettier`, and/or `--commitlint`.
+## 🛠️ Supported Technologies
 
-#### CLI reference
+NukeIt can delete dependencies for the following technologies:
 
-Below are the main CLI flags and options. Flags can be used together or in CI
-scripts to skip interactive prompts.
+| Flag       | Description                            | Directories Deleted             |
+| ---------- | -------------------------------------- | ------------------------------- |
+| `--node`   | Node.js project dependencies           | `node_modules`, `dist`, `build` |
+| `--next`   | Next.js project dependencies and cache | `.next`, `node_modules`, `dist` |
+| `--python` | Python virtual environments and cache  | `venv`, `.venv`, `__pycache__`  |
+| `--vscode` | VSCode workspace settings              | `.vscode`                       |
+| `--macos`  | macOS system files                     | `.DS_Store`                     |
 
-General options
+---
 
-| Flag / Argument   | Purpose                                                                       |
-| ----------------- | ----------------------------------------------------------------------------- |
-| `[directory]`     | Target directory or project name to create (positional).                      |
-| `-v`, `--version` | Print NukeIt version (from `package.json`).                                   |
-| `-h`, `--help`    | Show help and available options.                                              |
-| `--no-git`        | Skip initializing a Git repository in the created project.                    |
-| `--tools`         | Use the recommended dev tools (recommended tools are marked below).           |
-| `--no-tools`      | Skip automatic dev tool setup. Useful for minimal projects or custom tooling. |
+## ⚙️ Configuration
 
-Framework / language selection
+NukeIt's technology definitions and file mappings are defined in
+`nukeit.config.ts`:
 
-| Flag                       | Behavior                                                                                                                     |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `--next`, `--nextjs`       | Initialize a Next.js project (uses `create-next-app`). Conflicts with `--react` and `--express`.                             |
-| `--react`, `--reactjs`     | Initialize a React project scaffolded with Vite. Conflicts with `--next` and `--express`.                                    |
-| `--express`, `--expressjs` | Initialize an Express.js TypeScript template (Express currently requires TypeScript). Conflicts with `--next` and `--react`. |
-| `--ts`, `--typescript`     | Generate TypeScript-based projects (default for most flows). Conflicts with `--js`.                                          |
-| `--js`, `--javascript`     | Generate JavaScript-based projects. Conflicts with `--ts`.                                                                   |
+```typescript
+type ConfigItem = {
+	name: string;
+	value: string;
+	directories: string[];
+};
+```
 
-Tool-specific flags
+Each item in the config specifies:
 
-The CLI dynamically adds one flag per tool defined in `nukeit.config.ts`. Each
-tool has a `baseName` and sometimes an `otherName` to provide a short flag
-alias.
+- **name** - Display name in the UI
+- **value** - CLI flag name
+- **directories** - Array of directory/file names to delete recursively
 
-Use `--<baseName>` (or `--<otherName>` when available) to enable a specific tool
-in non-interactive mode. When enabled, the CLI will validate language/framework
-requirements and also add any tool dependencies automatically.
+To add support for a new technology, simply add it to the `nukeItConfig` array
+in `nukeit.config.ts`.
 
-### Tools reference (flags and requirements)
-
-The following table lists each tool flag available via the CLI (these are
-defined in `nukeit.config.ts`). For tools with an `otherName`, both flags are
-accepted (e.g. `--tailwindcss` and `--tailwind`). The `Recommended` column
-indicates whether the tool is included when you pass `--tools`.
-
-| Flag(s)                       | Description                                                                            | Recommended | Languages | Frameworks                 | Dependencies  |
-| ----------------------------- | -------------------------------------------------------------------------------------- | ----------: | --------- | -------------------------- | ------------- |
-| `--tailwindcss`, `--tailwind` | Adds Tailwind CSS config and styles.                                                   |         Yes | js, ts    | reactjs, nextjs            | —             |
-| `--eslint`, `--lint`          | Adds ESLint configuration.                                                             |         Yes | js, ts    | reactjs, nextjs, expressjs | —             |
-| `--prettier`                  | Adds Prettier configuration and formatting helpers.                                    |         Yes | js, ts    | reactjs, nextjs, expressjs | —             |
-| `--commitlint`                | Adds Commitlint and Husky hooks for conventional commits.                              |         Yes | js, ts    | reactjs, nextjs, expressjs | —             |
-| `--shadcn`                    | Installs shadcn UI, copies Vite config and runs `shadcn init`. (TypeScript only).      |          No | ts        | reactjs, nextjs            | `tailwindcss` |
-| `--prisma`                    | Adds Prisma ORM scaffold and installs `@prisma/client`. (TypeScript + Next.js).        |          No | ts        | nextjs                     | —             |
-| `--authjs`, `--auth`          | Adds Auth.js (next-auth) templates and runs `npx auth secret`. (TypeScript + Next.js). |          No | ts        | nextjs                     | `prisma`      |
-| `--zod`                       | Adds Zod validation templates.                                                         |          No | ts        | reactjs, nextjs            | —             |
-| `--zustand`                   | Adds Zustand state store templates (JS/TS variants available).                         |          No | ts        | reactjs, nextjs            | —             |
-
-Notes:
-
-- Flags will be validated at runtime — if a tool requires TypeScript or a
-  specific framework and the provided flags don't match, the CLI will exit with
-  an error explaining the missing requirement.
-- The `--tools` meta-flag will enable the recommended tools (`tailwindcss`,
-  `eslint`, `prettier`, `commitlint`) unless you explicitly pass other tool
-  flags.
-- `--no-tools` disables all automatic tool installs.
-
-### Templates included
-
-The `templates/` folder contains template files copied into generated projects
-when tools are enabled. Major template groups:
-
-- `commitlint/` — commitlint configuration
-- `husky/` — pre-configured Husky hooks (`pre-commit`, `commit-msg`)
-- `prettier/` — `.prettierrc` and `.prettierignore`
-- `tailwind/` — `vite.config` snippets and `index.css` bootstrap
-- `shadcn-vite/` — Vite config and tsconfig snippets to support shadcn UI
-- `prisma/` — `prisma` config and `schema.prisma` starter
-- `authjs/` — example Auth.js/next-auth files and `.env` example
-- `express-ts/` — an Express TypeScript starter used when `--express` is chosen
-- `zod/` — example `validator.ts` and helper files
-- `zustand/` — JS and TS store example implementations
-
-If you add new tools in `nukeit.config.ts`, the CLI will automatically expose
-`--<baseName>` flags and include them in the interactive prompt options (via
-`tli.ts`).
-
-## ⚙️ How the CLI works (behind the scenes)
-
-High-level flow when running `nukeit` (interactive or non-interactive):
-
-1. Validate and parse flags (commander). Conflicting flags are rejected (e.g.
-   `--next` vs `--react`).
-2. Validate the project name using `validateProjectName` (`utils.ts`).
-3. If interactive, prompt for framework, language, and dev tools (`tli.ts`).
-4. Create the base project depending on the framework:
-
-- Next.js: runs `npx create-next-app` (with `--ts` / `--js`, `--tailwind` when
-  requested).
-- React (Vite): runs `npx create-vite` with `react` or `react-ts` template.
-- Express (TypeScript): copies the `templates/express-ts` starter and installs
-  its dependencies.
-
-5. For each selected tool, run the corresponding helper in `utils.ts` which
-   usually:
-
-- Installs npm packages (dev or runtime)
-- Copies template files from `templates/<tool>` into the new project
-- Runs additional CLI helpers (for example: `npx shadcn init`,
-  `npx prisma generate`, `npx auth secret`, `npx husky init`).
-
-6. Initialize Git (unless `--no-git` was passed).
-7. Print a success message and exit.
-
-Notes & edge cases:
-
-- Tools are validated against `language` and `framework` requirements defined in
-  `nukeit.config.ts`. If a tool requires TypeScript or a specific framework and
-  the flags don't match, the CLI exits with a clear error.
-- When running with `--tools`, the CLI will enable all `recommended: true` tools
-  (see `nukeit.config.ts`). You can override that by passing individual tool
-  flags.
-- Express currently relies on a TypeScript starter; the code forces `typescript`
-  for Express-created projects (see `index.ts`).
-- The CLI uses `execa` to run external commands; these subprocesses will emit
-  output to the terminal (e.g., `npx create-next-app`, `npm install`).
+---
 
 ## 🏗️ Local Development
 
@@ -265,20 +175,20 @@ Want to contribute to NukeIt or test changes locally? Here's how to get started:
 ```bash
 # Clone the repository
 git clone https://github.com/ajaykumarn3000/nukeit.git
-cd NukeIt
+cd nukeit
 
 # Install dependencies
 npm install
 
 # Run in development mode
-npm run dev
+npm run dev ~/Dev
 
 # Build the project
 npm run build
 
 # Test the CLI locally (creates a global symlink)
 npm link
-nukeit
+nukeit ~/Dev
 
 # Unlink when done testing
 npm unlink -g nukeit
@@ -286,36 +196,150 @@ npm unlink -g nukeit
 
 ### Available Scripts
 
-| Script                 | Description                                                          |
-| ---------------------- | -------------------------------------------------------------------- |
-| `npm run dev`          | Run the CLI in development mode with `tsx`                           |
-| `npm run build`        | Build the project for production                                     |
-| `npm run lint`         | Run ESLint to check for code issues                                  |
-| `npm run lint:fix`     | Auto-fix ESLint issues where possible                                |
-| `npm run format`       | Format code with Prettier                                            |
-| `npm run format:check` | Check if code is properly formatted                                  |
-| `npm run clean`        | Remove the `dist` directory                                          |
-| `npm run deploy`       | Build and publish to npm (maintainers only)                          |
-| `npm run prepare`      | Run `husky` prepare script to set up git hooks (used by CI/prepare). |
+| Script             | Description                                                |
+| ------------------ | ---------------------------------------------------------- |
+| `npm run dev`      | Run the CLI in development mode with `tsx`                 |
+| `npm run build`    | Build and lint the project for production                  |
+| `npm run lint`     | Run ESLint to check for code issues                        |
+| `npm run lint:fix` | Auto-fix ESLint issues where possible                      |
+| `npm run format`   | Format code with Prettier                                  |
+| `npm run clean`    | Remove the `dist` directory                                |
+| `npm run deploy`   | Build and publish to npm (maintainers only)                |
+| `npm run prepare`  | Run `husky` prepare script to set up git hooks (auto-run). |
 
-### Project Structure
+---
+
+## 📁 Project Structure
 
 ```text
-NukeIt/
+nukeit/
 ├── index.ts              # Main CLI entry point
-├── tli.ts                # Interactive prompt helpers
-├── utils.ts              # Core utility functions (commands to scaffold and add tools)
-├── nukeit.config.ts      # Tool configuration (defines flags, requirements, and templates)
+├── tli.ts                # Interactive TUI prompts
+├── utils.ts              # Core utility functions
+├── nukeit.config.ts      # Technology configuration
 ├── package.json          # Project configuration
-├── templates/            # Template files for different tools (copied into generated projects)
-│   ├── commitlint/       # Commitlint configuration
-│   ├── husky/            # Git hooks
-│   ├── prettier/         # Prettier configuration
-│   ├── shadcn-vite/      # Shadcn UI Vite/TypeScript template files
-│   └── tailwind/         # Tailwind CSS files
+├── tsconfig.json         # TypeScript configuration
+├── eslint.config.js      # ESLint configuration
+├── commitlint.config.js  # Conventional commits configuration
 ├── dist/                 # Compiled output (created after build)
 └── README.md             # This file
 ```
+
+### Key Files Explained
+
+- **index.ts** - Entry point that sets up the CLI, parses arguments, and
+  orchestrates the workflow
+- **tli.ts** - Terminal UI helpers that provide interactive prompts for
+  selecting technologies and confirming deletion
+- **utils.ts** - Core functions for scanning directories and recursively
+  deleting files
+- **nukeit.config.ts** - Configuration that defines supported technologies and
+  their associated directories
+
+---
+
+## 🔄 How NukeIt Works (Behind the Scenes)
+
+High-level flow when running `nukeit <directory>`:
+
+1. **Parse CLI Arguments** - Use Commander.js to parse the directory path and
+   optional flags
+2. **Validate Directory** - Ensure the provided directory exists and is
+   accessible
+3. **Interactive Selection** (if no flags provided) - Use interactive prompts to
+   let users select which technologies to delete
+4. **Scan for Directories** - Recursively scan the directory tree to find all
+   instances of the selected directories
+5. **Confirmation** - Display a summary of what will be deleted and ask for
+   confirmation
+6. **Delete Recursively** - Remove all matching directories and files
+7. **Report Results** - Show a summary of what was deleted and storage freed
+
+---
+
+## 📊 Example Scenarios
+
+### Scenario 1: Clean a Multi-Stack Development Folder
+
+```bash
+$ nukeit ~/Dev --node --python
+
+Scanning ~/Dev for Node.js and Python dependencies...
+
+Found:
+  • 47 node_modules directories (~3.2 GB)
+  • 12 venv directories (~450 MB)
+  • 8 __pycache__ directories (~120 MB)
+
+Total space that will be freed: ~3.77 GB
+
+Proceed with deletion? (yes/no)
+```
+
+### Scenario 2: Interactive Selection
+
+```bash
+$ nukeit ~/Dev
+
+? Select technologies to nuke:
+  ◉ Node.js
+  ◉ Next.js
+  ○ Python
+  ○ VSCode
+  ○ macOS
+```
+
+### Scenario 3: Targeted Cleanup
+
+```bash
+# Only clean Python environments
+$ nukeit ~/Dev --python
+```
+
+---
+
+## 📋 CLI Reference
+
+### Basic Usage
+
+```bash
+nukeit <directory> [options]
+```
+
+### Options
+
+| Flag            | Description                          |
+| --------------- | ------------------------------------ |
+| `-v, --version` | Output the current version of NukeIt |
+| `-h, --help`    | Display help and available options   |
+| `--node`        | Delete Node.js dependencies          |
+| `--next`        | Delete Next.js dependencies          |
+| `--python`      | Delete Python virtual environments   |
+| `--vscode`      | Delete VSCode workspace settings     |
+| `--macos`       | Delete macOS system files            |
+
+---
+
+## 🚨 Safety & Best Practices
+
+### Before Running NukeIt
+
+1. **Backup Important Data** - If you have uncommitted changes, commit or stash
+   them first
+2. **Review Selections** - Always confirm the directories that will be deleted
+3. **Test on a Small Folder** - Try NukeIt on a small test directory first
+4. **Version Control** - Ensure all important code is committed to git
+
+### Recovery
+
+If you accidentally delete important files:
+
+- **Git Repositories** - Run `npm install`, `pip install -r requirements.txt`,
+  etc. to restore dependencies from lock files
+- **Untracked Files** - These cannot be recovered; ensure they're committed to
+  version control
+
+---
 
 ## 📄 Project Policies & Community Files
 
@@ -325,6 +349,8 @@ For details on contributing, security, and community standards, see:
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 - [Contributing Guidelines](./CONTRIBUTING.md)
 - [Security Policy](./SECURITY.md)
+
+---
 
 ## 🐛 Issues and Support
 
@@ -340,21 +366,22 @@ We're here to help! If you encounter any issues or have questions:
 
 - **GitHub Discussions**:
   [Suggest new features](https://github.com/ajaykumarn3000/nukeit/discussions)
-- Help us understand your use case and requirements
+- Help us understand your use case (e.g., new technology support)
 
 ### ❓ Questions and Support
 
 - **GitHub Discussions**:
   [Ask questions here](https://github.com/ajaykumarn3000/nukeit/discussions)
-- **Documentation**: Check our README for common use cases
-- **Examples**: Look at the templates directory for configuration examples
+- **Documentation**: Check this README for common use cases
 
 ### 🔍 Before Reporting
 
 1. **Search existing issues** to avoid duplicates
 2. **Check the latest version** - your issue might already be fixed
-3. **Review the documentation** - the answer might already be there
+3. **Review the documentation** - the answer might already be here
 4. **Test with a minimal example** - helps us reproduce the issue
+
+---
 
 ## 🌟 Community
 
@@ -366,11 +393,15 @@ Join our growing community of developers:
 - 🤝 **Contribute code** to make NukeIt even better
 - 📢 **Share with others** who might find NukeIt useful
 
+---
+
 ## 🔒 Security
 
 If you discover a security vulnerability, please report it privately by emailing
 [ajaykumarn3000@gmail.com](mailto:ajaykumarn3000@gmail.com). Please do not
 report security vulnerabilities through public GitHub issues.
+
+---
 
 ## 📊 Project Stats
 
@@ -380,48 +411,45 @@ report security vulnerabilities through public GitHub issues.
 - **Maintained**: ✅ Actively maintained
 - **Node.js**: 18.0+ required
 
-### Key dependencies
+### Key Dependencies
 
 - Runtime: `@clack/prompts` (interactive prompts), `chalk` (colors), `commander`
-  (CLI parsing), `execa` (shell commands), `tsx` (dev runner)
-- Dev: `eslint`, `prettier`, `husky`, `@commitlint/cli`,
-  `@commitlint/config-conventional`, `typescript`
+  (CLI parsing)
+- Dev: `eslint`, `prettier`, `husky`, `@commitlint/cli`, `typescript`, `tsx`
+
+---
 
 ## 🗺️ Roadmap
 
 We're continuously working to improve NukeIt. Here's what's on our radar:
 
-- [ ] **Framework Support**: Vue.js, Svelte, Angular
-- [ ] **Additional Tools**: Vitest, Jest, Cypress
-- [ ] **Package Managers**: Yarn, pnpm support
-- [ ] **Templates**: More starter templates
-- [ ] **CI/CD**: GitHub Actions, GitLab CI templates
-- [ ] **Database**: Drizzle integration options
-- [ ] **UI Libraries**: More component library options
+- [ ] **Additional Technologies**: Ruby, PHP, Go, Java, Rust support
+- [ ] **Dry Run Mode**: Preview what will be deleted without actually deleting
+- [ ] **Ignore Files**: Support for `.nukeitignore` to exclude specific paths
+- [ ] **Statistics**: Show disk space freed per technology
+- [ ] **Parallel Processing**: Speed up scanning of very large directory trees
+- [ ] **Configuration Profiles**: Save and reuse common deletion patterns
 
 Want to contribute to any of these? We'd love your help!
+
+---
 
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 for details.
 
+---
+
 ## 🙏 Acknowledgments
 
 NukeIt stands on the shoulders of giants. We're grateful to:
 
 - **Open Source Community**: For the amazing tools and libraries we integrate
-- **Framework Teams**: Next.js, React, Vite, and TypeScript teams for their
-  excellent work
-- **Tool Maintainers**: ESLint, Prettier, Husky, and Commitlint contributors
+- **Tool Maintainers**: clack, chalk, and commander contributors
 - **Contributors**: Everyone who has contributed code, reported issues, or
   shared feedback
 - **Users**: The developer community that uses and trusts NukeIt
-- **Inspiration**: Projects like create-next-app, create-react-app, and
-  create-vite
-
-Special thanks to all the developers who believe in making development tools
-better and more accessible.
 
 ---
 

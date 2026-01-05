@@ -1,6 +1,11 @@
 # Contributor Covenant Code of Conduct
 
-## Our Pledge
+## Our Commitment
+
+The NukeIt community is dedicated to providing a welcoming, respectful, and
+inclusive environment for all contributors and users. We are committed to
+building a community where everyone feels valued and can contribute to our
+open-source project regardless of background or experience level.
 
 We as members, contributors, and leaders pledge to make participation in our
 community a harassment-free experience for everyone, regardless of age, body
@@ -59,12 +64,14 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-[ajaykumarn3000@gmail.com](mailto:ajaykumarn3000@gmail.com). All complaints will
-be reviewed and investigated promptly and fairly.
+reported to the community leaders responsible for enforcement at the email
+below. All complaints will be reviewed and investigated promptly and fairly.
 
-All community leaders are obligated to respect the privacy and security of the
-reporter of any incident.
+**Report violations to**:
+[ajaykumarn3000@gmail.com](mailto:ajaykumarn3000@gmail.com)
+
+All community leaders are obligated to respect the privacy and security of those
+who report incidents in good faith.
 
 ## Enforcement Guidelines
 
@@ -122,3 +129,14 @@ Community Impact Guidelines were inspired by
 [Mozilla's code of conduct enforcement ladder](https://github.com/mozilla/diversity).
 
 [homepage]: https://www.contributor-covenant.org
+
+---
+
+## Questions?
+
+If you have questions about this Code of Conduct or how to report violations,
+please reach out to our maintainers at
+[ajaykumarn3000@gmail.com](mailto:ajaykumarn3000@gmail.com).
+
+For more information about contributing to NukeIt, see our
+[Contributing Guidelines](./CONTRIBUTING.md).
