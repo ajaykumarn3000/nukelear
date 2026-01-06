@@ -1,5 +1,5 @@
 {
-	"name": "nukeit",
+	"name": "wipeit",
 	"version": "1.0.0",
 	"description": "",
 	"main": "./dist/index.js",
@@ -15,17 +15,17 @@
 		"prepare": "husky"
 	},
 	"bin": {
-		"nukeit": "./dist/index.js"
+		"wipeit": "./dist/index.js"
 	},
 	"files": [
 		"dist"
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ajaykumarn3000/nukeit.git"
+		"url": "https://github.com/ajaykumarn3000/wipeit.git"
 	},
 	"keywords": [
-		"nukeit",
+		"wipeit",
 		"cli",
 		"tools"
 	],

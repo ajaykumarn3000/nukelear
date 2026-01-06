@@ -1,29 +1,29 @@
 <div align="center">
 
-# NukeIt 💣
+# Wipeit 💣
 
-[![npm version](https://badge.fury.io/js/nukeit.svg)](https://www.npmjs.com/package/nukeit)
+[![npm version](https://badge.fury.io/js/wipeit.svg)](https://www.npmjs.com/package/wipeit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/ajaykumarn3000/nukeit)](https://github.com/ajaykumarn3000/nukeit/issues)
-[![GitHub stars](https://img.shields.io/github/stars/ajaykumarn3000/nukeit)](https://github.com/ajaykumarn3000/nukeit/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/ajaykumarn3000/nukeit)](https://github.com/ajaykumarn3000/nukeit/network)
-[![GitHub contributors](https://img.shields.io/github/contributors/ajaykumarn3000/nukeit)](https://github.com/ajaykumarn3000/nukeit/graphs/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/ajaykumarn3000/wipeit)](https://github.com/ajaykumarn3000/wipeit/issues)
+[![GitHub stars](https://img.shields.io/github/stars/ajaykumarn3000/wipeit)](https://github.com/ajaykumarn3000/wipeit/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/ajaykumarn3000/wipeit)](https://github.com/ajaykumarn3000/wipeit/network)
+[![GitHub contributors](https://img.shields.io/github/contributors/ajaykumarn3000/wipeit)](https://github.com/ajaykumarn3000/wipeit/graphs/contributors)
 
 **Recursively delete package files and dependencies from nested project
 folders.**
 
-[⭐ Star on GitHub](https://github.com/ajaykumarn3000/nukeit) •
-[🐛 Report Bug](https://github.com/ajaykumarn3000/nukeit/issues) •
-[💡 Request Feature](https://github.com/ajaykumarn3000/nukeit/discussions) •
-[🤝 Contribute](https://github.com/ajaykumarn3000/nukeit/blob/main/CONTRIBUTING.md)
+[⭐ Star on GitHub](https://github.com/ajaykumarn3000/wipeit) •
+[🐛 Report Bug](https://github.com/ajaykumarn3000/wipeit/issues) •
+[💡 Request Feature](https://github.com/ajaykumarn3000/wipeit/discussions) •
+[🤝 Contribute](https://github.com/ajaykumarn3000/wipeit/blob/main/CONTRIBUTING.md)
 
 </div>
 
 ---
 
-## 🎯 What is NukeIt?
+## 🎯 What is Wipeit?
 
-NukeIt is a powerful CLI tool designed to help developers reclaim disk storage
+Wipeit is a powerful CLI tool designed to help developers reclaim disk storage
 by efficiently deleting unwanted package files and dependency folders from
 nested project structures.
 
@@ -38,7 +38,7 @@ folders from hundreds of projects is tedious and error-prone.
 
 ### The Solution
 
-NukeIt scans your entire development folder structure and lets you selectively
+Wipeit scans your entire development folder structure and lets you selectively
 delete package files and dependency directories from all projects in one
 command. No more forgotten `node_modules` sitting around for months or years.
 
@@ -63,7 +63,7 @@ command. No more forgotten `node_modules` sitting around for months or years.
 ### Using npx (Recommended)
 
 ```bash
-npx nukeit@latest <directory>
+npx wipeit@latest <directory>
 ```
 
 Replace `<directory>` with the path to your root development folder.
@@ -71,8 +71,8 @@ Replace `<directory>` with the path to your root development folder.
 ### Install Globally
 
 ```bash
-npm install -g nukeit
-nukeit <directory>
+npm install -g wipeit
+wipeit <directory>
 ```
 
 ### System Requirements
@@ -86,13 +86,13 @@ nukeit <directory>
 
 ### Interactive Mode (Recommended)
 
-When you run NukeIt without specifying technologies, you'll be presented with an
+When you run Wipeit without specifying technologies, you'll be presented with an
 interactive interface:
 
 ```bash
-$ npx nukeit ~/Dev
+$ npx wipeit ~/Dev
 
-┌  nukeit
+┌  wipeit
 │
 ◇  Select technologies to nuke:
 │  ◈ Node.js (node_modules, dist, build)
@@ -111,20 +111,20 @@ Skip all prompts by specifying technologies via flags:
 
 ```bash
 # Delete only Node.js dependencies
-nukeit ~/Dev --node
+wipeit ~/Dev --node
 
 # Delete multiple technologies at once
-nukeit ~/Dev --node --python
+wipeit ~/Dev --node --python
 
 # Delete everything
-nukeit ~/Dev --node --next --python --vscode --macos
+wipeit ~/Dev --node --next --python --vscode --macos
 ```
 
 ---
 
 ## 🛠️ Supported Technologies
 
-NukeIt can delete dependencies for the following technologies:
+Wipeit can delete dependencies for the following technologies:
 
 | Flag       | Description                            | Directories Deleted             |
 | ---------- | -------------------------------------- | ------------------------------- |
@@ -138,8 +138,8 @@ NukeIt can delete dependencies for the following technologies:
 
 ## ⚙️ Configuration
 
-NukeIt's technology definitions and file mappings are defined in
-`nukeit.config.ts`:
+Wipeit's technology definitions and file mappings are defined in
+`wipeit.config.ts`:
 
 ```typescript
 type ConfigItem = {
@@ -155,14 +155,14 @@ Each item in the config specifies:
 - **value** - CLI flag name
 - **directories** - Array of directory/file names to delete recursively
 
-To add support for a new technology, simply add it to the `nukeItConfig` array
-in `nukeit.config.ts`.
+To add support for a new technology, simply add it to the `wipeitConfig` array
+in `wipeit.config.ts`.
 
 ---
 
 ## 🏗️ Local Development
 
-Want to contribute to NukeIt or test changes locally? Here's how to get started:
+Want to contribute to Wipeit or test changes locally? Here's how to get started:
 
 ### Prerequisites
 
@@ -174,8 +174,8 @@ Want to contribute to NukeIt or test changes locally? Here's how to get started:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ajaykumarn3000/nukeit.git
-cd nukeit
+git clone https://github.com/ajaykumarn3000/wipeit.git
+cd wipeit
 
 # Install dependencies
 npm install
@@ -188,10 +188,10 @@ npm run build
 
 # Test the CLI locally (creates a global symlink)
 npm link
-nukeit ~/Dev
+wipeit ~/Dev
 
 # Unlink when done testing
-npm unlink -g nukeit
+npm unlink -g wipeit
 ```
 
 ### Available Scripts
@@ -212,11 +212,11 @@ npm unlink -g nukeit
 ## 📁 Project Structure
 
 ```text
-nukeit/
+wipeit/
 ├── index.ts              # Main CLI entry point
 ├── tli.ts                # Interactive TUI prompts
 ├── utils.ts              # Core utility functions
-├── nukeit.config.ts      # Technology configuration
+├── wipeit.config.ts      # Technology configuration
 ├── package.json          # Project configuration
 ├── tsconfig.json         # TypeScript configuration
 ├── eslint.config.js      # ESLint configuration
@@ -233,14 +233,14 @@ nukeit/
   selecting technologies and confirming deletion
 - **utils.ts** - Core functions for scanning directories and recursively
   deleting files
-- **nukeit.config.ts** - Configuration that defines supported technologies and
+- **wipeit.config.ts** - Configuration that defines supported technologies and
   their associated directories
 
 ---
 
-## 🔄 How NukeIt Works (Behind the Scenes)
+## 🔄 How Wipeit Works (Behind the Scenes)
 
-High-level flow when running `nukeit <directory>`:
+High-level flow when running `wipeit <directory>`:
 
 1. **Parse CLI Arguments** - Use Commander.js to parse the directory path and
    optional flags
@@ -262,7 +262,7 @@ High-level flow when running `nukeit <directory>`:
 ### Scenario 1: Clean a Multi-Stack Development Folder
 
 ```bash
-$ nukeit ~/Dev --node --python
+$ wipeit ~/Dev --node --python
 
 Scanning ~/Dev for Node.js and Python dependencies...
 
@@ -279,7 +279,7 @@ Proceed with deletion? (yes/no)
 ### Scenario 2: Interactive Selection
 
 ```bash
-$ nukeit ~/Dev
+$ wipeit ~/Dev
 
 ? Select technologies to nuke:
   ◉ Node.js
@@ -293,7 +293,7 @@ $ nukeit ~/Dev
 
 ```bash
 # Only clean Python environments
-$ nukeit ~/Dev --python
+$ wipeit ~/Dev --python
 ```
 
 ---
@@ -303,14 +303,14 @@ $ nukeit ~/Dev --python
 ### Basic Usage
 
 ```bash
-nukeit <directory> [options]
+wipeit <directory> [options]
 ```
 
 ### Options
 
 | Flag            | Description                          |
 | --------------- | ------------------------------------ |
-| `-v, --version` | Output the current version of NukeIt |
+| `-v, --version` | Output the current version of Wipeit |
 | `-h, --help`    | Display help and available options   |
 | `--node`        | Delete Node.js dependencies          |
 | `--next`        | Delete Next.js dependencies          |
@@ -322,12 +322,12 @@ nukeit <directory> [options]
 
 ## 🚨 Safety & Best Practices
 
-### Before Running NukeIt
+### Before Running Wipeit
 
 1. **Backup Important Data** - If you have uncommitted changes, commit or stash
    them first
 2. **Review Selections** - Always confirm the directories that will be deleted
-3. **Test on a Small Folder** - Try NukeIt on a small test directory first
+3. **Test on a Small Folder** - Try Wipeit on a small test directory first
 4. **Version Control** - Ensure all important code is committed to git
 
 ### Recovery
@@ -359,19 +359,19 @@ We're here to help! If you encounter any issues or have questions:
 ### 🚨 Bug Reports
 
 - **GitHub Issues**:
-  [Report bugs here](https://github.com/ajaykumarn3000/nukeit/issues)
+  [Report bugs here](https://github.com/ajaykumarn3000/wipeit/issues)
 - Please use our bug report template for faster resolution
 
 ### 💡 Feature Requests
 
 - **GitHub Discussions**:
-  [Suggest new features](https://github.com/ajaykumarn3000/nukeit/discussions)
+  [Suggest new features](https://github.com/ajaykumarn3000/wipeit/discussions)
 - Help us understand your use case (e.g., new technology support)
 
 ### ❓ Questions and Support
 
 - **GitHub Discussions**:
-  [Ask questions here](https://github.com/ajaykumarn3000/nukeit/discussions)
+  [Ask questions here](https://github.com/ajaykumarn3000/wipeit/discussions)
 - **Documentation**: Check this README for common use cases
 
 ### 🔍 Before Reporting
@@ -390,8 +390,8 @@ Join our growing community of developers:
 - ⭐ **Star the project** on GitHub to show your support
 - 🐛 **Report issues** to help us improve
 - 💬 **Join discussions** to share ideas and ask questions
-- 🤝 **Contribute code** to make NukeIt even better
-- 📢 **Share with others** who might find NukeIt useful
+- 🤝 **Contribute code** to make Wipeit even better
+- 📢 **Share with others** who might find Wipeit useful
 
 ---
 
@@ -421,11 +421,11 @@ report security vulnerabilities through public GitHub issues.
 
 ## 🗺️ Roadmap
 
-We're continuously working to improve NukeIt. Here's what's on our radar:
+We're continuously working to improve Wipeit. Here's what's on our radar:
 
 - [ ] **Additional Technologies**: Ruby, PHP, Go, Java, Rust support
 - [ ] **Dry Run Mode**: Preview what will be deleted without actually deleting
-- [ ] **Ignore Files**: Support for `.nukeitignore` to exclude specific paths
+- [ ] **Ignore Files**: Support for `.wipeitignore` to exclude specific paths
 - [ ] **Statistics**: Show disk space freed per technology
 - [ ] **Parallel Processing**: Speed up scanning of very large directory trees
 - [ ] **Configuration Profiles**: Save and reuse common deletion patterns
@@ -443,13 +443,13 @@ for details.
 
 ## 🙏 Acknowledgments
 
-NukeIt stands on the shoulders of giants. We're grateful to:
+Wipeit stands on the shoulders of giants. We're grateful to:
 
 - **Open Source Community**: For the amazing tools and libraries we integrate
 - **Tool Maintainers**: clack, chalk, and commander contributors
 - **Contributors**: Everyone who has contributed code, reported issues, or
   shared feedback
-- **Users**: The developer community that uses and trusts NukeIt
+- **Users**: The developer community that uses and trusts Wipeit
 
 ---
 
@@ -459,9 +459,9 @@ NukeIt stands on the shoulders of giants. We're grateful to:
 
 _Building tools that developers love to use_
 
-[⭐ Star on GitHub](https://github.com/ajaykumarn3000/nukeit) •
-[🐛 Report Bug](https://github.com/ajaykumarn3000/nukeit/issues) •
-[💡 Request Feature](https://github.com/ajaykumarn3000/nukeit/discussions) •
-[🤝 Contribute](https://github.com/ajaykumarn3000/nukeit/blob/main/CONTRIBUTING.md)
+[⭐ Star on GitHub](https://github.com/ajaykumarn3000/wipeit) •
+[🐛 Report Bug](https://github.com/ajaykumarn3000/wipeit/issues) •
+[💡 Request Feature](https://github.com/ajaykumarn3000/wipeit/discussions) •
+[🤝 Contribute](https://github.com/ajaykumarn3000/wipeit/blob/main/CONTRIBUTING.md)
 
 </div>

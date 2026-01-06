@@ -4,7 +4,7 @@ type ConfigItem = {
 	directories: string[];
 };
 
-export const nukeItConfig: ConfigItem[] = [
+export const wipeitConfig: ConfigItem[] = [
 	{
 		name: 'Python',
 		value: 'python',

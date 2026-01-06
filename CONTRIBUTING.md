@@ -1,8 +1,8 @@
-# Contributing to NukeIt
+# Contributing to Wipeit
 
-Thank you for your interest in contributing to NukeIt! We welcome and encourage
+Thank you for your interest in contributing to Wipeit! We welcome and encourage
 contributions from the community. Whether you're fixing bugs, adding features,
-improving documentation, or helping with issues, every contribution makes NukeIt
+improving documentation, or helping with issues, every contribution makes Wipeit
 better for everyone.
 
 Before you start, please review our [Code of Conduct](./CODE_OF_CONDUCT.md) and
@@ -11,9 +11,9 @@ Before you start, please review our [Code of Conduct](./CODE_OF_CONDUCT.md) and
 ## Ways to Contribute
 
 - 🐛 **Bug Reports**: Found a bug?
-  [Open an issue](https://github.com/ajaykumarn3000/nukeit/issues/new?template=bug_report.md)
+  [Open an issue](https://github.com/ajaykumarn3000/wipeit/issues/new?template=bug_report.md)
 - 💡 **Feature Requests**: Have an idea?
-  [Share it with us](https://github.com/ajaykumarn3000/nukeit/issues/new?template=feature_request.md)
+  [Share it with us](https://github.com/ajaykumarn3000/wipeit/issues/new?template=feature_request.md)
 - 📝 **Documentation**: Help improve our documentation
 - 🔧 **Code**: Submit pull requests with improvements or new features
 - 🧪 **Testing**: Help test new features or report edge cases
@@ -34,8 +34,8 @@ Before you start, please review our [Code of Conduct](./CODE_OF_CONDUCT.md) and
 
 ```bash
 # Fork the repository on GitHub, then clone your fork
-git clone https://github.com/YOUR_USERNAME/nukeit.git
-cd nukeit
+git clone https://github.com/YOUR_USERNAME/wipeit.git
+cd wipeit
 ```
 
 #### 2. Set Up Development Environment
@@ -78,14 +78,14 @@ npm run build
 
 # Test the CLI locally
 npm link
-nukeit
+wipeit
 
 # Test with specific flags
 npm run dev -- my-app --next --ts --tools
 npm run dev -- my-app --react --js
 
 # Unlink when done
-npm unlink -g nukeit
+npm unlink -g wipeit
 ```
 
 #### 5. Commit Your Changes
@@ -171,7 +171,7 @@ function validateProjectName(name: string): boolean {
 
 ## Testing Guidelines
 
-While NukeIt doesn't have automated tests yet, we ask that you:
+While Wipeit doesn't have automated tests yet, we ask that you:
 
 - **Test manually**: Try different flag combinations
   - `npm run dev -- test-app --next --ts --tools`
@@ -205,8 +205,8 @@ While NukeIt doesn't have automated tests yet, we ask that you:
 When reporting bugs, please include:
 
 - **Environment**: OS, Node.js version, npm/yarn/pnpm version
-- **NukeIt Version**: Output of `nukeit --version` or
-  `npx nukeit@latest --version`
+- **Wipeit Version**: Output of `wipeit --version` or
+  `npx wipeit@latest --version`
 - **Steps to Reproduce**: Clear, step-by-step instructions to reproduce the bug
 - **Expected Behavior**: What you expected to happen
 - **Actual Behavior**: What actually happened
@@ -215,7 +215,7 @@ When reporting bugs, please include:
 
 ### Creating a Bug Report
 
-1. Check [existing issues](https://github.com/ajaykumarn3000/nukeit/issues) to
+1. Check [existing issues](https://github.com/ajaykumarn3000/wipeit/issues) to
    avoid duplicates
 2. Use the bug report template on GitHub
 3. Provide as much detail as possible
@@ -232,7 +232,7 @@ When suggesting new features:
 ### Creating a Feature Request
 
 1. Use
-   [GitHub Discussions](https://github.com/ajaykumarn3000/nukeit/discussions)
+   [GitHub Discussions](https://github.com/ajaykumarn3000/wipeit/discussions)
    for feature ideas
 2. Describe the use case and problem you're trying to solve
 3. Provide examples of how you'd like to use the feature
@@ -245,10 +245,10 @@ appreciate every contribution, no matter how small! -->
 ## Getting Help
 
 - **GitHub Discussions**:
-  [Ask questions](https://github.com/ajaykumarn3000/nukeit/discussions) about
+  [Ask questions](https://github.com/ajaykumarn3000/wipeit/discussions) about
   development
 - **Existing Issues**: Check
-  [existing issues](https://github.com/ajaykumarn3000/nukeit/issues) for context
+  [existing issues](https://github.com/ajaykumarn3000/wipeit/issues) for context
 - **Code Review**: Review `index.ts`, `utils.ts`, and `tli.ts` to understand
   patterns
 - **Community**: Join the conversation in issues and pull requests
@@ -257,7 +257,7 @@ appreciate every contribution, no matter how small! -->
 
 ## Additional Resources
 
-- [NukeIt README](./README.md) - Full documentation
+- [Wipeit README](./README.md) - Full documentation
 - [Security Policy](./SECURITY.md) - Report vulnerabilities
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Community standards
 - [License](./LICENSE) - MIT License
