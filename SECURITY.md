@@ -1,11 +1,11 @@
 # Security Policy
 
-Wipeit takes the security of our users and the integrity of this open-source
+WipeIt takes the security of our users and the integrity of this open-source
 project very seriously.
 
 ## Reporting Security Vulnerabilities
 
-If you believe you have discovered a security vulnerability in Wipeit, we
+If you believe you have discovered a security vulnerability in WipeIt, we
 encourage you to let us know right away. **Please do not disclose the
 vulnerability publicly until we have had a chance to address it.**
 
@@ -14,7 +14,7 @@ vulnerability publicly until we have had a chance to address it.**
 We prefer that you use GitHub's **private vulnerability reporting** feature to
 disclose potential security vulnerabilities:
 
-1. Navigate to the [Wipeit repository](https://github.com/ajaykumarn3000/wipeit)
+1. Navigate to the [WipeIt repository](https://github.com/ajaykumarn3000/wipeit)
 2. Click the **Security** tab
 3. Click **Report a vulnerability**
 4. Fill out the vulnerability report form with as much detail as possible
@@ -41,10 +41,10 @@ Please include:
 
 ## Security Best Practices
 
-When using Wipeit:
+When using WipeIt:
 
-- **Keep dependencies updated**: Regularly update Wipeit and its dependencies
-- **Review generated code**: Always review the code scaffolded by Wipeit
+- **Keep dependencies updated**: Regularly update WipeIt and its dependencies
+- **Review generated code**: Always review the code scaffolded by WipeIt
 - **Follow framework guidelines**: Adhere to security best practices for your
   chosen framework (Next.js, React, Express)
 - **Environment variables**: Store sensitive data in environment variables,
@@ -56,7 +56,7 @@ When using Wipeit:
 
 This security policy applies to:
 
-- The Wipeit CLI tool itself
+- The WipeIt CLI tool itself
 - Generated project scaffolding
 - Dependencies included by default
 
@@ -64,11 +64,11 @@ It does **not** apply to:
 
 - Issues in generated project code (responsibility of the developer)
 - Third-party frameworks or tools used by generated projects
-- Projects generated with custom tools not provided by Wipeit
+- Projects generated with custom tools not provided by WipeIt
 
 ## Thank You
 
-Thank you for helping us keep Wipeit and its community safe. We appreciate your
+Thank you for helping us keep WipeIt and its community safe. We appreciate your
 responsible disclosure and commitment to security.
 
 For more information, see our [Contributing Guidelines](./CONTRIBUTING.md).

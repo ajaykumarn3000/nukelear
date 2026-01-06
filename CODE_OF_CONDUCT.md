@@ -2,7 +2,7 @@
 
 ## Our Commitment
 
-The Wipeit community is dedicated to providing a welcoming, respectful, and
+The WipeIt community is dedicated to providing a welcoming, respectful, and
 inclusive environment for all contributors and users. We are committed to
 building a community where everyone feels valued and can contribute to our
 open-source project regardless of background or experience level.
@@ -138,5 +138,5 @@ If you have questions about this Code of Conduct or how to report violations,
 please reach out to our maintainers at
 [ajaykumarn3000@gmail.com](mailto:ajaykumarn3000@gmail.com).
 
-For more information about contributing to Wipeit, see our
+For more information about contributing to WipeIt, see our
 [Contributing Guidelines](./CONTRIBUTING.md).

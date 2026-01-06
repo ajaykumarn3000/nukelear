@@ -1,6 +1,6 @@
 <div align="center">
 
-# Wipeit 💣
+# WipeIt 💣
 
 [![npm version](https://badge.fury.io/js/wipeit.svg)](https://www.npmjs.com/package/wipeit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -21,9 +21,9 @@ folders.**
 
 ---
 
-## 🎯 What is Wipeit?
+## 🎯 What is WipeIt?
 
-Wipeit is a powerful CLI tool designed to help developers reclaim disk storage
+WipeIt is a powerful CLI tool designed to help developers reclaim disk storage
 by efficiently deleting unwanted package files and dependency folders from
 nested project structures.
 
@@ -38,7 +38,7 @@ folders from hundreds of projects is tedious and error-prone.
 
 ### The Solution
 
-Wipeit scans your entire development folder structure and lets you selectively
+WipeIt scans your entire development folder structure and lets you selectively
 delete package files and dependency directories from all projects in one
 command. No more forgotten `node_modules` sitting around for months or years.
 
@@ -86,7 +86,7 @@ wipeit <directory>
 
 ### Interactive Mode (Recommended)
 
-When you run Wipeit without specifying technologies, you'll be presented with an
+When you run WipeIt without specifying technologies, you'll be presented with an
 interactive interface:
 
 ```bash
@@ -124,7 +124,7 @@ wipeit ~/Dev --node --next --python --vscode --macos
 
 ## 🛠️ Supported Technologies
 
-Wipeit can delete dependencies for the following technologies:
+WipeIt can delete dependencies for the following technologies:
 
 | Flag       | Description                            | Directories Deleted             |
 | ---------- | -------------------------------------- | ------------------------------- |
@@ -138,7 +138,7 @@ Wipeit can delete dependencies for the following technologies:
 
 ## ⚙️ Configuration
 
-Wipeit's technology definitions and file mappings are defined in
+WipeIt's technology definitions and file mappings are defined in
 `wipeit.config.ts`:
 
 ```typescript
@@ -162,7 +162,7 @@ in `wipeit.config.ts`.
 
 ## 🏗️ Local Development
 
-Want to contribute to Wipeit or test changes locally? Here's how to get started:
+Want to contribute to WipeIt or test changes locally? Here's how to get started:
 
 ### Prerequisites
 
@@ -238,7 +238,7 @@ wipeit/
 
 ---
 
-## 🔄 How Wipeit Works (Behind the Scenes)
+## 🔄 How WipeIt Works (Behind the Scenes)
 
 High-level flow when running `wipeit <directory>`:
 
@@ -310,7 +310,7 @@ wipeit <directory> [options]
 
 | Flag            | Description                          |
 | --------------- | ------------------------------------ |
-| `-v, --version` | Output the current version of Wipeit |
+| `-v, --version` | Output the current version of WipeIt |
 | `-h, --help`    | Display help and available options   |
 | `--node`        | Delete Node.js dependencies          |
 | `--next`        | Delete Next.js dependencies          |
@@ -322,12 +322,12 @@ wipeit <directory> [options]
 
 ## 🚨 Safety & Best Practices
 
-### Before Running Wipeit
+### Before Running WipeIt
 
 1. **Backup Important Data** - If you have uncommitted changes, commit or stash
    them first
 2. **Review Selections** - Always confirm the directories that will be deleted
-3. **Test on a Small Folder** - Try Wipeit on a small test directory first
+3. **Test on a Small Folder** - Try WipeIt on a small test directory first
 4. **Version Control** - Ensure all important code is committed to git
 
 ### Recovery
@@ -390,8 +390,8 @@ Join our growing community of developers:
 - ⭐ **Star the project** on GitHub to show your support
 - 🐛 **Report issues** to help us improve
 - 💬 **Join discussions** to share ideas and ask questions
-- 🤝 **Contribute code** to make Wipeit even better
-- 📢 **Share with others** who might find Wipeit useful
+- 🤝 **Contribute code** to make WipeIt even better
+- 📢 **Share with others** who might find WipeIt useful
 
 ---
 
@@ -421,7 +421,7 @@ report security vulnerabilities through public GitHub issues.
 
 ## 🗺️ Roadmap
 
-We're continuously working to improve Wipeit. Here's what's on our radar:
+We're continuously working to improve WipeIt. Here's what's on our radar:
 
 - [ ] **Additional Technologies**: Ruby, PHP, Go, Java, Rust support
 - [ ] **Dry Run Mode**: Preview what will be deleted without actually deleting
@@ -443,13 +443,13 @@ for details.
 
 ## 🙏 Acknowledgments
 
-Wipeit stands on the shoulders of giants. We're grateful to:
+WipeIt stands on the shoulders of giants. We're grateful to:
 
 - **Open Source Community**: For the amazing tools and libraries we integrate
 - **Tool Maintainers**: clack, chalk, and commander contributors
 - **Contributors**: Everyone who has contributed code, reported issues, or
   shared feedback
-- **Users**: The developer community that uses and trusts Wipeit
+- **Users**: The developer community that uses and trusts WipeIt
 
 ---
 

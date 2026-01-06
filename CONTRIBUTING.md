@@ -1,8 +1,8 @@
-# Contributing to Wipeit
+# Contributing to WipeIt
 
-Thank you for your interest in contributing to Wipeit! We welcome and encourage
+Thank you for your interest in contributing to WipeIt! We welcome and encourage
 contributions from the community. Whether you're fixing bugs, adding features,
-improving documentation, or helping with issues, every contribution makes Wipeit
+improving documentation, or helping with issues, every contribution makes WipeIt
 better for everyone.
 
 Before you start, please review our [Code of Conduct](./CODE_OF_CONDUCT.md) and
@@ -171,7 +171,7 @@ function validateProjectName(name: string): boolean {
 
 ## Testing Guidelines
 
-While Wipeit doesn't have automated tests yet, we ask that you:
+While WipeIt doesn't have automated tests yet, we ask that you:
 
 - **Test manually**: Try different flag combinations
   - `npm run dev -- test-app --next --ts --tools`
@@ -205,7 +205,7 @@ While Wipeit doesn't have automated tests yet, we ask that you:
 When reporting bugs, please include:
 
 - **Environment**: OS, Node.js version, npm/yarn/pnpm version
-- **Wipeit Version**: Output of `wipeit --version` or
+- **WipeIt Version**: Output of `wipeit --version` or
   `npx wipeit@latest --version`
 - **Steps to Reproduce**: Clear, step-by-step instructions to reproduce the bug
 - **Expected Behavior**: What you expected to happen
@@ -257,7 +257,7 @@ appreciate every contribution, no matter how small! -->
 
 ## Additional Resources
 
-- [Wipeit README](./README.md) - Full documentation
+- [WipeIt README](./README.md) - Full documentation
 - [Security Policy](./SECURITY.md) - Report vulnerabilities
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Community standards
 - [License](./LICENSE) - MIT License
