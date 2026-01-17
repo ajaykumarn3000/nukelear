@@ -1,6 +1,10 @@
 <div align="center">
 
-# Nukelear 💣
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.png">
+  <img alt="Fallback image description" src="assets/banner-dark.png">
+</picture>
 
 [![npm version](https://badge.fury.io/js/nukelear.svg)](https://www.npmjs.com/package/nukelear)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -239,66 +243,6 @@ nukelear/
 
 ---
 
-## 🔄 How Nukelear Works (Behind the Scenes)
-
-High-level flow when running `nukelear <directory>`:
-
-1. **Parse CLI Arguments** - Use Commander.js to parse the directory path and
-   optional flags
-2. **Validate Directory** - Ensure the provided directory exists and is
-   accessible
-3. **Interactive Selection** (if no flags provided) - Use interactive prompts to
-   let users select which technologies to delete
-4. **Scan for Directories** - Recursively scan the directory tree to find all
-   instances of the selected directories
-5. **Confirmation** - Display a summary of what will be deleted and ask for
-   confirmation
-6. **Delete Recursively** - Remove all matching directories and files
-7. **Report Results** - Show a summary of what was deleted and storage freed
-
----
-
-## 📊 Example Scenarios
-
-### Scenario 1: Clean a Multi-Stack Development Folder
-
-```bash
-$ nukelear ~/Dev --node --python
-
-Scanning ~/Dev for Node.js and Python dependencies...
-
-Found:
-  • 47 node_modules directories (~3.2 GB)
-  • 12 venv directories (~450 MB)
-  • 8 __pycache__ directories (~120 MB)
-
-Total space that will be freed: ~3.77 GB
-
-Proceed with deletion? (yes/no)
-```
-
-### Scenario 2: Interactive Selection
-
-```bash
-$ nukelear ~/Dev
-
-? Select technologies to nuke:
-  ◉ Node.js
-  ◉ Next.js
-  ○ Python
-  ○ VSCode
-  ○ macOS
-```
-
-### Scenario 3: Targeted Cleanup
-
-```bash
-# Only clean Python environments
-$ nukelear ~/Dev --python
-```
-
----
-
 ## 📋 CLI Reference
 
 ### Basic Usage
@@ -318,120 +262,6 @@ nukelear <directory> [options]
 | `--python`      | Delete Python virtual environments     |
 | `--vscode`      | Delete VSCode workspace settings       |
 | `--macos`       | Delete macOS system files              |
-
----
-
-## 🚨 Safety & Best Practices
-
-### Before Running Nukelear
-
-1. **Backup Important Data** - If you have uncommitted changes, commit or stash
-   them first
-2. **Review Selections** - Always confirm the directories that will be deleted
-3. **Test on a Small Folder** - Try Nukelear on a small test directory first
-4. **Version Control** - Ensure all important code is committed to git
-
-### Recovery
-
-If you accidentally delete important files:
-
-- **Git Repositories** - Run `npm install`, `pip install -r requirements.txt`,
-  etc. to restore dependencies from lock files
-- **Untracked Files** - These cannot be recovered; ensure they're committed to
-  version control
-
----
-
-## 📄 Project Policies & Community Files
-
-For details on contributing, security, and community standards, see:
-
-- [LICENSE](./LICENSE)
-- [Code of Conduct](./CODE_OF_CONDUCT.md)
-- [Contributing Guidelines](./CONTRIBUTING.md)
-- [Security Policy](./SECURITY.md)
-
----
-
-## 🐛 Issues and Support
-
-We're here to help! If you encounter any issues or have questions:
-
-### 🚨 Bug Reports
-
-- **GitHub Issues**:
-  [Report bugs here](https://github.com/ajaykumarn3000/nukelear/issues)
-- Please use our bug report template for faster resolution
-
-### 💡 Feature Requests
-
-- **GitHub Discussions**:
-  [Suggest new features](https://github.com/ajaykumarn3000/nukelear/discussions)
-- Help us understand your use case (e.g., new technology support)
-
-### ❓ Questions and Support
-
-- **GitHub Discussions**:
-  [Ask questions here](https://github.com/ajaykumarn3000/nukelear/discussions)
-- **Documentation**: Check this README for common use cases
-
-### 🔍 Before Reporting
-
-1. **Search existing issues** to avoid duplicates
-2. **Check the latest version** - your issue might already be fixed
-3. **Review the documentation** - the answer might already be here
-4. **Test with a minimal example** - helps us reproduce the issue
-
----
-
-## 🌟 Community
-
-Join our growing community of developers:
-
-- ⭐ **Star the project** on GitHub to show your support
-- 🐛 **Report issues** to help us improve
-- 💬 **Join discussions** to share ideas and ask questions
-- 🤝 **Contribute code** to make Nukelear even better
-- 📢 **Share with others** who might find Nukelear useful
-
----
-
-## 🔒 Security
-
-If you discover a security vulnerability, please report it privately by emailing
-[ajaykumarn3000@gmail.com](mailto:ajaykumarn3000@gmail.com). Please do not
-report security vulnerabilities through public GitHub issues.
-
----
-
-## 📊 Project Stats
-
-- **Language**: TypeScript
-- **Package Manager**: npm
-- **License**: MIT
-- **Maintained**: ✅ Actively maintained
-- **Node.js**: 18.0+ required
-
-### Key Dependencies
-
-- Runtime: `@clack/prompts` (interactive prompts), `chalk` (colors), `commander`
-  (CLI parsing)
-- Dev: `eslint`, `prettier`, `husky`, `@commitlint/cli`, `typescript`, `tsx`
-
----
-
-## 🗺️ Roadmap
-
-We're continuously working to improve Nukelear. Here's what's on our radar:
-
-- [ ] **Additional Technologies**: Ruby, PHP, Go, Java, Rust support
-- [ ] **Dry Run Mode**: Preview what will be deleted without actually deleting
-- [ ] **Ignore Files**: Support for `.nukelearignore` to exclude specific paths
-- [ ] **Statistics**: Show disk space freed per technology
-- [ ] **Parallel Processing**: Speed up scanning of very large directory trees
-- [ ] **Configuration Profiles**: Save and reuse common deletion patterns
-
-Want to contribute to any of these? We'd love your help!
 
 ---
 

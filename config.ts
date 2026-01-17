@@ -21,6 +21,11 @@ export const config: ConfigItem[] = [
 		directories: ['node_modules', '.next', 'dist', 'build'],
 	},
 	{
+		name: 'VSCode',
+		value: 'vscode',
+		directories: ['.vscode'],
+	},
+	{
 		name: 'MacOS',
 		value: 'macos',
 		directories: ['.DS_Store'],
