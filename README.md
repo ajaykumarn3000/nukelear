@@ -48,20 +48,6 @@ command. No more forgotten `node_modules` sitting around for months or years.
 
 ---
 
-## ✨ Features
-
-- 🎯 **Recursive Scanning** - Finds and deletes unwanted files across deeply
-  nested project structures
-- 📦 **Multi-Technology Support** - Delete dependencies for Python, Node.js,
-  Next.js, VSCode, and macOS
-- 🖥️ **Interactive TUI** - User-friendly terminal interface for selecting what
-  to delete
-- ⚡ **Bulk Operations** - Clean up multiple projects with a single command
-- 🛡️ **Safe by Default** - Review selections before confirming deletion
-- 🚀 **Zero Configuration** - Works out of the box with sensible defaults
-
----
-
 ## 🚀 Quick Start
 
 ### Using npx (Recommended)
