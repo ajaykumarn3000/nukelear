@@ -3,7 +3,7 @@
 import * as p from '@clack/prompts';
 import { chalkStderr } from 'chalk';
 import packageJSON from './package.json' with { type: 'json' };
-import { wipeItConfig } from './wipeit.config.js';
+import { config } from './config.js';
 import { getTechnology, selectDirectories, confirmNuke } from './tli.js';
 import { findTargetDirectories, nukeDirectories } from './utils.js';
 import { Command, Option } from 'commander';
@@ -22,12 +22,12 @@ async function main() {
 		.version(
 			packageJSON.version,
 			'-v, --version',
-			'Output the current version of WipeIt.'
+			'Output the current version of Nukelear.'
 		)
 		.argument('<directory>')
 		.usage('<directory> [options]')
 		.helpOption('-h, --help', 'Display this help message.');
-	for (const tool of wipeItConfig) {
+	for (const tool of config) {
 		program.addOption(
 			new Option(`--${tool.value}`, `${tool.directories.join(', ')}`)
 		);
@@ -54,7 +54,7 @@ async function main() {
 	const dirsToNuke = new Set<string>();
 
 	for (const tech of technologies) {
-		const toolConfig = wipeItConfig.find(tool => tool.value === tech);
+		const toolConfig = config.find(tool => tool.value === tech);
 		if (toolConfig) {
 			toolConfig.directories.forEach(dir => dirsToNuke.add(dir));
 		}

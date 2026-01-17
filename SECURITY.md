@@ -1,11 +1,11 @@
 # Security Policy
 
-WipeIt takes the security of our users and the integrity of this open-source
+Nukelear takes the security of our users and the integrity of this open-source
 project very seriously.
 
 ## Reporting Security Vulnerabilities
 
-If you believe you have discovered a security vulnerability in WipeIt, we
+If you believe you have discovered a security vulnerability in Nukelear, we
 encourage you to let us know right away. **Please do not disclose the
 vulnerability publicly until we have had a chance to address it.**
 
@@ -14,7 +14,8 @@ vulnerability publicly until we have had a chance to address it.**
 We prefer that you use GitHub's **private vulnerability reporting** feature to
 disclose potential security vulnerabilities:
 
-1. Navigate to the [WipeIt repository](https://github.com/ajaykumarn3000/wipeit)
+1. Navigate to the
+   [Nukelear repository](https://github.com/ajaykumarn3000/nukelear)
 2. Click the **Security** tab
 3. Click **Report a vulnerability**
 4. Fill out the vulnerability report form with as much detail as possible
@@ -41,10 +42,10 @@ Please include:
 
 ## Security Best Practices
 
-When using WipeIt:
+When using Nukelear:
 
-- **Keep dependencies updated**: Regularly update WipeIt and its dependencies
-- **Review generated code**: Always review the code scaffolded by WipeIt
+- **Keep dependencies updated**: Regularly update Nukelear and its dependencies
+- **Review generated code**: Always review the code scaffolded by Nukelear
 - **Follow framework guidelines**: Adhere to security best practices for your
   chosen framework (Next.js, React, Express)
 - **Environment variables**: Store sensitive data in environment variables,
@@ -56,7 +57,7 @@ When using WipeIt:
 
 This security policy applies to:
 
-- The WipeIt CLI tool itself
+- The Nukelear CLI tool itself
 - Generated project scaffolding
 - Dependencies included by default
 
@@ -64,11 +65,11 @@ It does **not** apply to:
 
 - Issues in generated project code (responsibility of the developer)
 - Third-party frameworks or tools used by generated projects
-- Projects generated with custom tools not provided by WipeIt
+- Projects generated with custom tools not provided by Nukelear
 
 ## Thank You
 
-Thank you for helping us keep WipeIt and its community safe. We appreciate your
-responsible disclosure and commitment to security.
+Thank you for helping us keep Nukelear and its community safe. We appreciate
+your responsible disclosure and commitment to security.
 
 For more information, see our [Contributing Guidelines](./CONTRIBUTING.md).

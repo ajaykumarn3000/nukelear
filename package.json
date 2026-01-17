@@ -1,5 +1,5 @@
 {
-	"name": "wipeit",
+	"name": "nukelear",
 	"version": "1.0.0",
 	"description": "",
 	"main": "./dist/index.js",
@@ -15,17 +15,17 @@
 		"prepare": "husky"
 	},
 	"bin": {
-		"wipeit": "./dist/index.js"
+		"nukelear": "./dist/index.js"
 	},
 	"files": [
 		"dist"
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ajaykumarn3000/wipeit.git"
+		"url": "https://github.com/ajaykumarn3000/nukelear.git"
 	},
 	"keywords": [
-		"wipeit",
+		"nukelear",
 		"cli",
 		"tools"
 	],

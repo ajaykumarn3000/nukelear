@@ -1,6 +1,6 @@
 import * as p from '@clack/prompts';
 import { chalkStderr } from 'chalk';
-import { wipeItConfig } from './wipeit.config.js';
+import { config } from './config.js';
 
 const { cyan } = chalkStderr;
 export async function getDirectory() {
@@ -18,7 +18,7 @@ export async function getDirectory() {
 export async function getTechnology() {
 	const technology = await p.multiselect({
 		message: `Select ${cyan('technologies')} to nuke`,
-		options: wipeItConfig.map(tool => ({
+		options: config.map(tool => ({
 			value: tool.value,
 			label: tool.name,
 			hint: tool.directories.join(', '),

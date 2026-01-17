@@ -1,9 +1,9 @@
-# Contributing to WipeIt
+# Contributing to Nukelear
 
-Thank you for your interest in contributing to WipeIt! We welcome and encourage
-contributions from the community. Whether you're fixing bugs, adding features,
-improving documentation, or helping with issues, every contribution makes WipeIt
-better for everyone.
+Thank you for your interest in contributing to Nukelear! We welcome and
+encourage contributions from the community. Whether you're fixing bugs, adding
+features, improving documentation, or helping with issues, every contribution
+makes Nukelear better for everyone.
 
 Before you start, please review our [Code of Conduct](./CODE_OF_CONDUCT.md) and
 [Security Policy](./SECURITY.md).
@@ -11,9 +11,9 @@ Before you start, please review our [Code of Conduct](./CODE_OF_CONDUCT.md) and
 ## Ways to Contribute
 
 - 🐛 **Bug Reports**: Found a bug?
-  [Open an issue](https://github.com/ajaykumarn3000/wipeit/issues/new?template=bug_report.md)
+  [Open an issue](https://github.com/ajaykumarn3000/nukelear/issues/new?template=bug_report.md)
 - 💡 **Feature Requests**: Have an idea?
-  [Share it with us](https://github.com/ajaykumarn3000/wipeit/issues/new?template=feature_request.md)
+  [Share it with us](https://github.com/ajaykumarn3000/nukelear/issues/new?template=feature_request.md)
 - 📝 **Documentation**: Help improve our documentation
 - 🔧 **Code**: Submit pull requests with improvements or new features
 - 🧪 **Testing**: Help test new features or report edge cases
@@ -34,8 +34,8 @@ Before you start, please review our [Code of Conduct](./CODE_OF_CONDUCT.md) and
 
 ```bash
 # Fork the repository on GitHub, then clone your fork
-git clone https://github.com/YOUR_USERNAME/wipeit.git
-cd wipeit
+git clone https://github.com/YOUR_USERNAME/nukelear.git
+cd nukelear
 ```
 
 #### 2. Set Up Development Environment
@@ -78,14 +78,14 @@ npm run build
 
 # Test the CLI locally
 npm link
-wipeit
+nukelear
 
 # Test with specific flags
 npm run dev -- my-app --next --ts --tools
 npm run dev -- my-app --react --js
 
 # Unlink when done
-npm unlink -g wipeit
+npm unlink -g nukelear
 ```
 
 #### 5. Commit Your Changes
@@ -171,7 +171,7 @@ function validateProjectName(name: string): boolean {
 
 ## Testing Guidelines
 
-While WipeIt doesn't have automated tests yet, we ask that you:
+While Nukelear doesn't have automated tests yet, we ask that you:
 
 - **Test manually**: Try different flag combinations
   - `npm run dev -- test-app --next --ts --tools`
@@ -205,8 +205,8 @@ While WipeIt doesn't have automated tests yet, we ask that you:
 When reporting bugs, please include:
 
 - **Environment**: OS, Node.js version, npm/yarn/pnpm version
-- **WipeIt Version**: Output of `wipeit --version` or
-  `npx wipeit@latest --version`
+- **Nukelear Version**: Output of `nukelear --version` or
+  `npx nukelear@latest --version`
 - **Steps to Reproduce**: Clear, step-by-step instructions to reproduce the bug
 - **Expected Behavior**: What you expected to happen
 - **Actual Behavior**: What actually happened
@@ -215,7 +215,7 @@ When reporting bugs, please include:
 
 ### Creating a Bug Report
 
-1. Check [existing issues](https://github.com/ajaykumarn3000/wipeit/issues) to
+1. Check [existing issues](https://github.com/ajaykumarn3000/nukelear/issues) to
    avoid duplicates
 2. Use the bug report template on GitHub
 3. Provide as much detail as possible
@@ -232,7 +232,7 @@ When suggesting new features:
 ### Creating a Feature Request
 
 1. Use
-   [GitHub Discussions](https://github.com/ajaykumarn3000/wipeit/discussions)
+   [GitHub Discussions](https://github.com/ajaykumarn3000/nukelear/discussions)
    for feature ideas
 2. Describe the use case and problem you're trying to solve
 3. Provide examples of how you'd like to use the feature
@@ -245,10 +245,11 @@ appreciate every contribution, no matter how small! -->
 ## Getting Help
 
 - **GitHub Discussions**:
-  [Ask questions](https://github.com/ajaykumarn3000/wipeit/discussions) about
+  [Ask questions](https://github.com/ajaykumarn3000/nukelear/discussions) about
   development
 - **Existing Issues**: Check
-  [existing issues](https://github.com/ajaykumarn3000/wipeit/issues) for context
+  [existing issues](https://github.com/ajaykumarn3000/nukelear/issues) for
+  context
 - **Code Review**: Review `index.ts`, `utils.ts`, and `tli.ts` to understand
   patterns
 - **Community**: Join the conversation in issues and pull requests
@@ -257,7 +258,7 @@ appreciate every contribution, no matter how small! -->
 
 ## Additional Resources
 
-- [WipeIt README](./README.md) - Full documentation
+- [Nukelear README](./README.md) - Full documentation
 - [Security Policy](./SECURITY.md) - Report vulnerabilities
 - [Code of Conduct](./CODE_OF_CONDUCT.md) - Community standards
 - [License](./LICENSE) - MIT License

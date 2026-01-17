@@ -4,7 +4,7 @@ type ConfigItem = {
 	directories: string[];
 };
 
-export const wipeItConfig: ConfigItem[] = [
+export const config: ConfigItem[] = [
 	{
 		name: 'Python',
 		value: 'python',
@@ -19,11 +19,6 @@ export const wipeItConfig: ConfigItem[] = [
 		name: 'Next.js',
 		value: 'next',
 		directories: ['node_modules', '.next', 'dist', 'build'],
-	},
-	{
-		name: 'VSCode',
-		value: 'vscode',
-		directories: ['.vscode'],
 	},
 	{
 		name: 'MacOS',
