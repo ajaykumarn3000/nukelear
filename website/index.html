@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nukelear — Intelligent Project Cleanup for Developers</title>
+  <meta name="description" content="Find, inspect and safely clean unnecessary build artifacts, dependencies and development clutter.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../assets/icon.png" type="image/png">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="nav-logo">⚛️</div>
+        <span class="nav-name">Nukelear</span>
+      </div>
+      <div class="nav-links">
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="technologies.html" class="nav-link">Technologies</a>
+        <a href="docs.html" class="nav-link">Docs</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <a href="../nukelear-web.html" class="nav-cta">Launch Nukelear</a>
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Nukelear</h1>
+          <p class="hero-tagline">Clean the clutter. Keep the project.</p>
+          <p class="hero-description">Find unnecessary project clutter, inspect it before removal, and clean it safely.</p>
+          <div class="hero-buttons">
+            <a href="../nukelear-web.html" class="btn btn-primary">Launch Nukelear</a>
+            <a href="how-it-works.html" class="btn btn-secondary">How It Works</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="mockup">
+            <div class="mockup-header">PROJECT ANALYSIS</div>
+            <div class="mockup-body">
+              <div class="mockup-project">demo-project</div>
+              <div class="mockup-items">
+                <div class="mockup-item">
+                  <span class="mockup-name">node_modules</span>
+                  <span class="mockup-size">824 MB</span>
+                </div>
+                <div class="mockup-item">
+                  <span class="mockup-name">.next</span>
+                  <span class="mockup-size">312 MB</span>
+                </div>
+                <div class="mockup-item">
+                  <span class="mockup-name">dist</span>
+                  <span class="mockup-size">96 MB</span>
+                </div>
+                <div class="mockup-item">
+                  <span class="mockup-name">build</span>
+                  <span class="mockup-size">72 MB</span>
+                </div>
+              </div>
+              <div class="mockup-divider"></div>
+              <div class="mockup-total">
+                <span class="mockup-total-label">Reclaimable</span>
+                <span class="mockup-total-size">1.30 GB</span>
+              </div>
+              <div class="mockup-action">Review Files</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-problem">
+      <div class="container">
+        <h2 class="section-title">The Problem</h2>
+        <p class="section-subtitle">Modern development projects accumulate generated clutter</p>
+        <div class="problem-list">
+          <div class="problem-item">
+            <div class="problem-icon">📦</div>
+            <div class="problem-content">
+              <h3>node_modules/</h3>
+              <p>Package dependencies that can consume gigabytes of storage across multiple projects</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">🏗️</div>
+            <div class="problem-content">
+              <h3>dist/ and build/</h3>
+              <p>Build artifacts that become outdated after each compilation</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">⚡</div>
+            <div class="problem-content">
+              <h3>.next/ and .cache/</h3>
+              <p>Framework caches and temporary files that grow over time</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">🐍</div>
+            <div class="problem-content">
+              <h3>__pycache__/ and venv/</h3>
+              <p>Python bytecode and virtual environments that accumulate across projects</p>
+            </div>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">💾</div>
+            <div class="problem-content">
+              <h3>.DS_Store and .vscode</h3>
+              <p>System and editor files that are not needed in production</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-solution" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">A simple four-step workflow</p>
+        <div class="workflow">
+          <div class="workflow-step">
+            <div class="workflow-number">1</div>
+            <h3 class="workflow-title">Find</h3>
+            <p class="workflow-description">Identify unnecessary project clutter across nested directory structures</p>
+          </div>
+          <div class="workflow-arrow" aria-hidden="true">→</div>
+          <div class="workflow-step">
+            <div class="workflow-number">2</div>
+            <h3 class="workflow-title">Inspect</h3>
+            <p class="workflow-description">Review files, folders, sizes and actual contents before removal</p>
+          </div>
+          <div class="workflow-arrow" aria-hidden="true">→</div>
+          <div class="workflow-step">
+            <div class="workflow-number">3</div>
+            <h3 class="workflow-title">Clean</h3>
+            <p class="workflow-description">Move selected items to the recycle bin for safe removal</p>
+          </div>
+          <div class="workflow-arrow" aria-hidden="true">→</div>
+          <div class="workflow-step">
+            <div class="workflow-number">4</div>
+            <h3 class="workflow-title">Restore</h3>
+            <p class="workflow-description">Recover items from the recycle bin when needed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-safety">
+      <div class="container">
+        <h2 class="section-title">Clean with confidence</h2>
+        <div class="safety-flow">
+          <div class="safety-step">
+            <div class="safety-icon">🔍</div>
+            <h3>Scan</h3>
+            <p>Deep recursive scanning of project directories</p>
+          </div>
+          <div class="safety-arrow">→</div>
+          <div class="safety-step">
+            <div class="safety-icon">🎯</div>
+            <h3>Identify</h3>
+            <p>Match known clutter patterns by technology</p>
+          </div>
+          <div class="safety-arrow">→</div>
+          <div class="safety-step">
+            <div class="safety-icon">👁️</div>
+            <h3>Inspect</h3>
+            <p>Preview file contents before cleanup</p>
+          </div>
+          <div class="safety-arrow">→</div>
+          <div class="safety-step">
+            <div class="safety-icon">✓</div>
+            <h3>Confirm</h3>
+            <p>Type-to-confirm before any deletion</p>
+          </div>
+          <div class="safety-arrow">→</div>
+          <div class="safety-step">
+            <div class="safety-icon">🗑️</div>
+            <h3>Recycle Bin</h3>
+            <p>Items are moved to trash, not permanently deleted</p>
+          </div>
+          <div class="safety-arrow">→</div>
+          <div class="safety-step">
+            <div class="safety-icon">↩️</div>
+            <h3>Restore</h3>
+            <p>Recover items when you need them back</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-preview" id="features">
+      <div class="container">
+        <h2 class="section-title">Built for developers</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Fast Scanning</h3>
+            <p>Recursive directory scanning with instant results for large projects</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👁️</div>
+            <h3>File Preview</h3>
+            <p>Inspect actual file contents before making deletion decisions</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🗑️</div>
+            <h3>Recycle Bin</h3>
+            <p>Safe deletion with restore capability for accidental removals</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Type-to-Confirm</h3>
+            <p>Explicit confirmation required before any destructive action</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🌐</div>
+            <h3>GitHub Upload</h3>
+            <p>Direct upload with built-in secret detection and redaction</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💻</div>
+            <h3>Cross-Platform</h3>
+            <p>Works on macOS, Linux, and Windows with consistent behavior</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-technologies" id="technologies">
+      <div class="container">
+        <h2 class="section-title">Supported Technologies</h2>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <div class="tech-icon">🟢</div>
+            <h3>Node.js</h3>
+            <p>node_modules, dist, build</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">▲</div>
+            <h3>Next.js</h3>
+            <p>.next, node_modules, dist, build</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🐍</div>
+            <h3>Python</h3>
+            <p>venv, .venv, __pycache__</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">💻</div>
+            <h3>VS Code</h3>
+            <p>.vscode workspace settings</p>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🍎</div>
+            <h3>macOS</h3>
+            <p>.DS_Store system files</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container">
+        <h2 class="section-title">Ready to clean your projects?</h2>
+        <p class="section-subtitle">Launch Nukelear and reclaim gigabytes of storage in seconds</p>
+        <a href="../nukelear-web.html" class="btn btn-primary btn-large">Launch Nukelear</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">⚛️</div>
+        <div class="footer-tagline">Clean the clutter. Keep the project.</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Product</h4>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="features.html">Features</a>
+          <a href="technologies.html">Technologies</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="docs.html">Documentation</a>
+          <a href="https://github.com/joel-patole/Nukelear">GitHub</a>
+        </div>
+        <div class="footer-column">
+          <h4>Project</h4>
+          <a href="about.html">About</a>
+          <a href="../LICENSE">License</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Nukelear. MIT License.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="website.js"></script>
+</body>
+</html>

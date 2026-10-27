@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Nukelear</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../assets/icon.png" type="image/png">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="nav-logo">⚛️</div>
+        <span class="nav-name">Nukelear</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="technologies.html" class="nav-link">Technologies</a>
+        <a href="docs.html" class="nav-link">Docs</a>
+        <a href="about.html" class="nav-link nav-link-active">About</a>
+      </div>
+      <a href="../nukelear-web.html" class="nav-cta">Launch Nukelear</a>
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section page-header">
+      <div class="container">
+        <h1 class="page-title">About</h1>
+        <p class="page-subtitle">Intelligent project cleanup for developers</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="about-content">
+          <h2 class="section-title">What is Nukelear?</h2>
+          <p class="about-text">
+            Nukelear is a powerful developer utility that helps you reclaim disk space by identifying and cleaning unnecessary build artifacts, dependencies, and development clutter. Available as both a CLI tool and a standalone web application, Nukelear provides a safe, efficient way to manage project storage without risking important files.
+          </p>
+          <p class="about-text">
+            With support for Node.js, Next.js, Python, VS Code, and macOS-specific files, Nukelear detects known clutter patterns and gives you full control over what gets cleaned. The recycle bin system allows you to restore items if needed, and file content preview lets you inspect files before deletion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">The Problem</h2>
+        <p class="about-text">
+          Modern development projects accumulate significant amounts of generated files and dependencies over time. A single project can contain gigabytes of `node_modules`, build artifacts, cache directories, and editor-specific files. When managing multiple projects across nested directory structures, this clutter consumes disk space unnecessarily and makes it difficult to identify what can be safely removed.
+        </p>
+        <p class="about-text">
+          Manually tracking and deleting these directories is tedious, error-prone, and risky. Developers often leave clutter sitting around for months or years, wasting storage and creating backup bloat.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">The Approach</h2>
+        <div class="workflow-mini">
+          <div class="workflow-step-mini">
+            <div class="step-number-mini">1</div>
+            <h3 class="step-title-mini">Find</h3>
+            <p class="step-description-mini">Identify unnecessary project clutter through recursive scanning</p>
+          </div>
+          <div class="workflow-arrow-mini">→</div>
+          <div class="workflow-step-mini">
+            <div class="step-number-mini">2</div>
+            <h3 class="step-title-mini">Inspect</h3>
+            <p class="step-description-mini">Review files, folders, sizes, and actual contents</p>
+          </div>
+          <div class="workflow-arrow-mini">→</div>
+          <div class="workflow-step-mini">
+            <div class="step-number-mini">3</div>
+            <h3 class="step-title-mini">Clean</h3>
+            <p class="step-description-mini">Move selected items to the recycle bin safely</p>
+          </div>
+          <div class="workflow-arrow-mini">→</div>
+          <div class="workflow-step-mini">
+            <div class="step-number-mini">4</div>
+            <h3 class="step-title-mini">Restore</h3>
+            <p class="step-description-mini">Recover items when necessary</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Technology</h2>
+        <div class="tech-stack">
+          <div class="tech-item">
+            <div class="tech-label">TypeScript</div>
+            <div class="tech-desc">Type-safe development</div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">Node.js</div>
+            <div class="tech-desc">Cross-platform runtime</div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">Commander</div>
+            <div class="tech-desc">CLI framework</div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">Clack</div>
+            <div class="tech-desc">Interactive prompts</div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">Chalk</div>
+            <div class="tech-desc">Terminal styling</div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-label">File System Access API</div>
+            <div class="tech-desc">Browser file operations</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Open Source</h2>
+        <p class="about-text">
+          Nukelear is open source software released under the MIT License. The project is developed and maintained by <a href="https://github.com/joel-patole" class="about-link">Joel Patole</a> and welcomes contributions from the developer community. Contact: <a href="mailto:joelpatole1@gmail.com" class="about-link">joelpatole1@gmail.com</a>.
+        </p>
+        <div class="about-links">
+          <a href="https://github.com/joel-patole/Nukelear" class="btn btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://github.com/joel-patole/Nukelear/issues" class="btn btn-secondary" target="_blank" rel="noopener">Report Issues</a>
+          <a href="https://github.com/joel-patole/Nukelear/blob/main/CONTRIBUTING.md" class="btn btn-secondary" target="_blank" rel="noopener">Contribute</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container">
+        <h2 class="section-title">Get started with Nukelear</h2>
+        <p class="section-subtitle">Clean your projects safely and efficiently</p>
+        <a href="../nukelear-web.html" class="btn btn-primary btn-large">Launch Nukelear</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">⚛️</div>
+        <div class="footer-tagline">Clean the clutter. Keep the project.</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Product</h4>
+          <a href="index.html">Home</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="features.html">Features</a>
+          <a href="technologies.html">Technologies</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="docs.html">Documentation</a>
+          <a href="https://github.com/joel-patole/Nukelear">GitHub</a>
+        </div>
+        <div class="footer-column">
+          <h4>Project</h4>
+          <a href="about.html">About</a>
+          <a href="../LICENSE">License</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Nukelear. MIT License.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="website.js"></script>
+</body>
+</html>

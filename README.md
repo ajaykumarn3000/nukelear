@@ -8,18 +8,17 @@
 
 [![npm version](https://badge.fury.io/js/nukelear.svg)](https://www.npmjs.com/package/nukelear)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/ajaykumarn3000/nukelear)](https://github.com/ajaykumarn3000/nukelear/issues)
-[![GitHub stars](https://img.shields.io/github/stars/ajaykumarn3000/nukelear)](https://github.com/ajaykumarn3000/nukelear/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/ajaykumarn3000/nukelear)](https://github.com/ajaykumarn3000/nukelear/network)
-[![GitHub contributors](https://img.shields.io/github/contributors/ajaykumarn3000/nukelear)](https://github.com/ajaykumarn3000/nukelear/graphs/contributors)
+[![GitHub issues](https://img.shields.io/github/issues/joel-patole/Nukelear)](https://github.com/joel-patole/Nukelear/issues)
+[![GitHub stars](https://img.shields.io/github/stars/joel-patole/Nukelear)](https://github.com/joel-patole/Nukelear/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/joel-patole/Nukelear)](https://github.com/joel-patole/Nukelear/network)
+[![GitHub contributors](https://img.shields.io/github/contributors/joel-patole/Nukelear)](https://github.com/joel-patole/Nukelear/graphs/contributors)
 
-**Recursively delete package files and dependencies from nested project
-folders.**
+**The dual-purpose developer toolkit: recursively clean up heavy dependencies to reclaim disk storage — and upload clean project files straight to GitHub with automated secret detection.**
 
-[⭐ Star on GitHub](https://github.com/ajaykumarn3000/nukelear) •
-[🐛 Report Bug](https://github.com/ajaykumarn3000/nukelear/issues) •
-[💡 Request Feature](https://github.com/ajaykumarn3000/nukelear/discussions) •
-[🤝 Contribute](https://github.com/ajaykumarn3000/nukelear/blob/main/CONTRIBUTING.md)
+[⭐ Star on GitHub](https://github.com/joel-patole/Nukelear) •
+[🐛 Report Bug](https://github.com/joel-patole/Nukelear/issues) •
+[💡 Request Feature](https://github.com/joel-patole/Nukelear/discussions) •
+[🤝 Contribute](https://github.com/joel-patole/Nukelear/blob/main/CONTRIBUTING.md)
 
 </div>
 
@@ -27,24 +26,38 @@ folders.**
 
 ## 🎯 What is Nukelear?
 
-Nukelear is a powerful CLI tool designed to help developers reclaim disk storage
-by efficiently deleting unwanted package files and dependency folders from
-nested project structures.
+Nukelear is a powerful developer utility — usable as a fast terminal CLI or as an interactive browser app (**Nukelear Web**) — built around **two primary functions**:
 
-### The Problem
+1. 🧹 **Recursive Dependency & Storage Cleanup (CLI & Web)**  
+   Scans deep, nested project structures (`Dev/`, `Projects/`, multi-repo workspaces) and safely nukes bulky dependency folders (`node_modules`, Python `.venv`, build artifacts, cache) to reclaim gigabytes of disk space in seconds.
 
-If you have a large, nested development folder structure (like `Dev/` containing
-multiple stack-specific subfolders - `python/`, `nodejs/`, `nextjs/`, etc.) and
-install libraries/packages for development or demonstration, those
-`node_modules` directories, Python `venv`, and other dependency folders can
-consume **gigabytes** of storage over time. Manually tracking and deleting these
-folders from hundreds of projects is tedious and error-prone.
+2. ☁️ **Direct GitHub Upload with Built-in Secret Shield (Web)**  
+   Uploads chosen project files directly to any GitHub repository straight from your browser via GitHub's API — no `git` command line needed. Automatically scans file contents for hardcoded credentials, API keys, passwords, and tokens, unchecks sensitive files, and lets you redact secrets on-the-fly before pushing.
 
-### The Solution
+---
 
-Nukelear scans your entire development folder structure and lets you selectively
-delete package files and dependency directories from all projects in one
-command. No more forgotten `node_modules` sitting around for months or years.
+### 1. Dependency Cleanup
+
+#### The Problem
+If you have a large, nested development folder structure (like `Dev/` containing multiple stack-specific subfolders - `python/`, `nodejs/`, `nextjs/`, etc.) and install libraries/packages for development or demonstration, those `node_modules` directories, Python `venv`, and other dependency folders can consume **gigabytes** of storage over time. Manually tracking and deleting these folders from hundreds of projects is tedious and error-prone.
+
+#### The Solution
+Nukelear scans your entire development folder structure and lets you selectively delete package files and dependency directories from all projects in one command (or a few clicks). No more forgotten `node_modules` sitting around for months or years.
+
+### 2. Direct GitHub Upload
+
+#### The Problem
+Pushing clean code or demo projects to GitHub often requires initializing Git, setting remotes, configuring `.gitignore` to avoid pushing heavy clutter, and double-checking that local secrets (`.env`, private keys, API credentials) aren't accidentally committed.
+
+#### The Solution
+Nukelear Web's **GitHub Upload** tab connects directly to GitHub's REST API using a personal access token. It automatically skips clutter folders (`node_modules`, `.git`, `venv`, `dist`), flags sensitive filenames, deep-scans small text files for hardcoded secrets, and allows you to redact sensitive lines right in your browser before committing directly to your branch.
+
+---
+
+### 💻 Two Ways to Use Nukelear
+
+- **The CLI** (`nukelear`) — Run it directly from your terminal, focused on blazing-fast recursive dependency scanning, interactive selection, and safe deletion.
+- **Nukelear Web** (`nukelear-web.html`) — A single self-contained file you open in Chrome/Edge (no install needed). It provides the same cleanup engine plus a Recycle Bin, content previews, and the complete **GitHub Upload** workflow with secret detection. Full walkthrough in [🆕 New Features & How to Use Them](#-new-features--how-to-use-them) below.
 
 ---
 
@@ -165,8 +178,8 @@ started:
 
 ```bash
 # Clone the repository
-git clone https://github.com/ajaykumarn3000/nukelear.git
-cd nukelear
+git clone https://github.com/joel-patole/Nukelear.git
+cd Nukelear
 
 # Install dependencies
 npm install
@@ -270,15 +283,117 @@ Nukelear stands on the shoulders of giants. We're grateful to:
 
 ---
 
+---
+
+## 🆕 New Features & How to Use Them
+
+This version adds a Recycle Bin, typed delete-confirmation, content
+previews, storage stats, and (in the browser version) direct GitHub
+uploads. Steps for each are below.
+
+### 0. Opening Nukelear Web (the browser version)
+
+No install, no terminal. It only works in **Chrome, Edge, Brave, or Opera**
+on desktop — it needs the File System Access API, which Safari and Firefox
+don't support.
+
+1. Double-click `nukelear-web.html`, or drag it into your browser.
+2. Click **"Choose Folder…"** and grant access to the project folder you
+   want to clean. Its size is shown right away.
+3. Pick the technologies to clean from the checkboxes — it rescans
+   automatically each time you change a selection.
+4. Review the matched folders. Click 👁️ next to any item to preview its
+   contents before deciding to delete it.
+5. Select the items you want gone and click **"Move to Recycle Bin."**
+6. Type `delete` in the confirmation box to proceed.
+7. Check the result panel for the amount freed and your project's size
+   before/after.
+8. Open the **"Recycle Bin"** tab any time to restore an item, or the
+   **"GitHub Upload"** tab to push files to a repo (see below).
+
+### 1. Recycle Bin (CLI)
+
+Nuking no longer deletes permanently by default — items are moved into a
+hidden `.nukelear-trash` folder inside your project first.
+
+1. Run Nukelear as usual: `nukelear ~/Dev`
+2. Select technologies and directories, then confirm — the items move to
+   the Recycle Bin instead of being deleted outright.
+3. List what's in the bin: `nukelear ~/Dev --list-trash`
+4. Restore an item by its id: `nukelear ~/Dev --restore <id>`
+5. Permanently empty the bin: `nukelear ~/Dev --empty-trash`
+6. To skip the Recycle Bin entirely and delete for good, add `--permanent`:
+   `nukelear ~/Dev --node --permanent`
+
+### 2. Type-to-confirm (CLI & Web)
+
+Instead of a plain yes/no prompt, you'll be asked to type the word
+`delete` before anything is removed. This applies both in the terminal and
+in Nukelear Web's confirmation dialog.
+
+### 3. Preview before deleting (CLI & Web)
+
+- **CLI:** after selecting items to nuke, answer "yes" when asked
+  "Preview the contents of the selected items before deleting?" to see each
+  item's type, size, and a sample of its contents.
+- **Web:** click the 👁️ icon next to any matched item to preview a file's
+  text or a folder's contents before deleting it.
+
+### 4. Storage stats (CLI & Web)
+
+After cleanup finishes, you'll see the project size before, the amount
+freed, and the project size now — both in the terminal output and in
+Nukelear Web's result panel.
+
+### 5. Uploading to GitHub from Nukelear Web
+
+The **GitHub Upload** tab in `nukelear-web.html` pushes chosen files
+straight to a GitHub repository using GitHub's API — no `git` command line
+needed. The target branch must already have at least one commit (e.g. a
+repo created with a README); this tool commits on top of it rather than
+initializing a new repo.
+
+1. **Create a token.** On GitHub: Settings → Developer settings →
+   Fine-grained tokens → Generate new token, scoped to the one repo you're
+   uploading to, with **Contents: Read and write** permission.
+2. Open `nukelear-web.html`, choose your project folder, then open the
+   **GitHub Upload** tab.
+3. Paste your token into **GitHub Personal Access Token**.
+4. Paste the **repository link**, e.g. `https://github.com/you/your-repo`.
+5. Set the **branch** (default `main`) and a **commit message**.
+6. Click **"Scan Project Files"** — it walks your project, skipping
+   `node_modules`, `.git`, `dist`, `.next`, `venv`, and similar folders. It
+   also peeks inside each small text file for anything that reads like a
+   hardcoded password, admin login, API key, or other credential — not
+   just files with a suspicious *name*.
+7. **Review the file list before uploading.** Files flagged either by name
+   (`.env`, `*.pem`, `credentials.json`, etc. — badge "Looks sensitive") or
+   by what's actually written inside them (badge "🔑 Secrets in content")
+   are unchecked automatically. Use the filter box to find and uncheck any
+   other specific file yourself.
+8. **Edit a file instead of excluding it.** Click ✏️ next to any file to
+   open its text right in the page. Flagged lines are listed above the
+   editor — click **"Redact All Detected"** to blank them out in one go, or
+   edit any line by hand. **"Save Changes"** stores that edited version as
+   what gets uploaded; your real local file is left untouched unless you
+   tick "Also overwrite my local file."
+9. Click **"Upload Selected Files."** Progress logs live as each file is
+   committed and the branch is updated.
+10. If anything still flagged (by name or by content) is still checked,
+    you'll get one more confirmation prompt listing exactly which files,
+    before they're pushed.
+
+**Security note:** your token is only used in your browser to call
+`api.github.com` directly — it's never stored or sent anywhere else. Since
+it's pasted into a plain HTML file, only use this on a machine you trust,
+and use a fine-grained token scoped to just that one repo. The secret
+detection (by name and by content) is a best-effort heuristic, not a
+guarantee — always glance over the file list yourself before uploading.
+
+---
+
 <div align="center">
 
-**Made with ❤️ by [Ajaykumar Nadar](https://github.com/ajaykumarn3000/)**
-
-_Building tools that developers love to use_
-
-[⭐ Star on GitHub](https://github.com/ajaykumarn3000/nukelear) •
-[🐛 Report Bug](https://github.com/ajaykumarn3000/nukelear/issues) •
-[💡 Request Feature](https://github.com/ajaykumarn3000/nukelear/discussions) •
-[🤝 Contribute](https://github.com/ajaykumarn3000/nukelear/blob/main/CONTRIBUTING.md)
+**Made by [Joel Patole](https://github.com/joel-patole)** · [joelpatole1@gmail.com](mailto:joelpatole1@gmail.com)
 
 </div>

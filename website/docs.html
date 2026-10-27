@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — Nukelear</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../assets/icon.png" type="image/png">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <div class="nav-logo">⚛️</div>
+        <span class="nav-name">Nukelear</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="technologies.html" class="nav-link">Technologies</a>
+        <a href="docs.html" class="nav-link nav-link-active">Docs</a>
+        <a href="about.html" class="nav-link">About</a>
+      </div>
+      <a href="../nukelear-web.html" class="nav-cta">Launch Nukelear</a>
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section section-docs">
+      <div class="container">
+        <div class="docs-page-header">
+          <h1 class="page-title">Documentation</h1>
+          <p class="page-subtitle">Complete guide to using Nukelear</p>
+        </div>
+
+        <div class="docs-layout">
+          <aside class="docs-sidebar">
+            <nav class="docs-nav" aria-label="Documentation">
+              <h2 class="docs-nav-title">Documentation</h2>
+              <div class="docs-nav-links">
+                <a href="#getting-started" class="docs-nav-link active">Getting Started</a>
+                <a href="#web-app" class="docs-nav-link">Web Application</a>
+                <a href="#file-preview" class="docs-nav-link">File Preview</a>
+                <a href="#cleanup" class="docs-nav-link">Cleanup</a>
+                <a href="#recycle-bin" class="docs-nav-link">Recycle Bin</a>
+                <a href="#restore" class="docs-nav-link">Restore</a>
+                <a href="#cli" class="docs-nav-link">CLI</a>
+                <a href="#safety" class="docs-nav-link">Safety</a>
+              </div>
+            </nav>
+          </aside>
+
+          <div class="docs-content">
+            <section id="getting-started" class="docs-section">
+              <h2 class="docs-section-title">Getting Started</h2>
+              <p class="docs-text">Nukelear is available as both a standalone web application and a CLI tool. The web application requires a browser that supports the File System Access API (Chrome, Edge, Brave, or Opera on desktop).</p>
+
+              <h3 class="docs-subtitle">Web Application</h3>
+              <p class="docs-text">Open <code class="docs-code">nukelear-web.html</code> in your browser. No installation required.</p>
+
+              <h3 class="docs-subtitle">CLI Installation</h3>
+              <div class="docs-code-block">
+                <pre><code># Install globally
+npm install -g nukelear
+
+# Or use npx without installation
+npx nukelear@latest &lt;directory&gt;</code></pre>
+              </div>
+
+              <h3 class="docs-subtitle">System Requirements</h3>
+              <ul class="docs-list">
+                <li>Node.js 18.0 or higher</li>
+                <li>npm 7.0 or higher (or yarn/pnpm equivalent)</li>
+              </ul>
+            </section>
+
+            <section id="web-app" class="docs-section">
+              <h2 class="docs-section-title">Web Application</h2>
+              <p class="docs-text">The web application provides a complete graphical interface for project cleanup with recycle bin support and file content preview.</p>
+
+              <h3 class="docs-subtitle">Select Project</h3>
+              <p class="docs-text">Click "Choose Folder" and select the project directory you want to clean. Grant browser access to the folder when prompted. The project size will be displayed immediately.</p>
+
+              <h3 class="docs-subtitle">Select Technologies</h3>
+              <p class="docs-text">Choose which technologies to scan for. Available options include Node.js, Next.js, Python, VS Code, and macOS. The scan runs automatically when you change your selection.</p>
+
+              <h3 class="docs-subtitle">Scan</h3>
+              <p class="docs-text">Nukelear recursively scans the project for directories matching the selected technology patterns. Detected items are displayed with their paths and sizes.</p>
+
+              <h3 class="docs-subtitle">Review Results</h3>
+              <p class="docs-text">Review the detected items before cleanup. You can see the total reclaimable size and individual item sizes. Use "Select All" or "Clear Selection" to manage your choices quickly.</p>
+
+              <h3 class="docs-subtitle">Preview Files</h3>
+              <p class="docs-text">Click the View icon (👁️) next to any item to preview its contents. For directories, you can see contained files. For files, you can read actual text/code content safely before deletion.</p>
+
+              <h3 class="docs-subtitle">Select Items</h3>
+              <p class="docs-text">Check the items you want to clean. You can select individual items or use bulk selection controls. The selected size is displayed in real-time.</p>
+
+              <h3 class="docs-subtitle">Move to Recycle Bin</h3>
+              <p class="docs-text">Click "Move to Recycle Bin" to clean selected items. Type "delete" in the confirmation dialog to proceed. Items are moved to a local <code class="docs-code">.nukelear-trash</code> directory within your project.</p>
+            </section>
+
+            <section id="file-preview" class="docs-section">
+              <h2 class="docs-section-title">File Preview</h2>
+              <p class="docs-text">Nukelear allows you to inspect actual file contents before cleanup, helping you avoid accidental deletion of important files.</p>
+
+              <h3 class="docs-subtitle">Directory Preview</h3>
+              <p class="docs-text">When previewing a directory, you can see all contained files and folders. Each child item can be clicked to open its own preview.</p>
+
+              <h3 class="docs-subtitle">File Content Preview</h3>
+              <p class="docs-text">For readable text files (JavaScript, TypeScript, JSON, HTML, CSS, Python, Markdown, etc.), Nukelear displays the actual file contents in a scrollable preview window. Binary files are clearly marked as unsupported.</p>
+
+              <div class="docs-callout docs-callout-info">
+                <strong>Note:</strong> File preview is read-only. No files are modified during preview operations.
+              </div>
+
+              <h3 class="docs-subtitle">Size Limits</h3>
+              <p class="docs-text">Large text files are truncated at 10,000 characters with a clear indication. Files larger than 100KB are not loaded into the preview to maintain performance.</p>
+            </section>
+
+            <section id="cleanup" class="docs-section">
+              <h2 class="docs-section-title">Cleanup</h2>
+              <p class="docs-text">Cleanup operations move selected items to the recycle bin rather than permanent deletion by default.</p>
+
+              <h3 class="docs-subtitle">Type-to-Confirm</h3>
+              <p class="docs-text">Before any cleanup operation, you must type "delete" to confirm. This prevents accidental deletion of important files.</p>
+
+              <h3 class="docs-subtitle">Size Calculation</h3>
+              <p class="docs-text">Project size is calculated recursively, excluding <code class="docs-code">.git</code> and <code class="docs-code">.nukelear-trash</code> directories. This ensures that recycle bin contents do not affect project size calculations.</p>
+
+              <h3 class="docs-subtitle">Result Display</h3>
+              <p class="docs-text">After cleanup, you can see the project size before, the amount freed, and the project size after the operation.</p>
+            </section>
+
+            <section id="recycle-bin" class="docs-section">
+              <h2 class="docs-section-title">Recycle Bin</h2>
+              <p class="docs-text">All cleaned items are stored in a local recycle bin located at <code class="docs-code">.nukelear-trash</code> within your project directory.</p>
+
+              <h3 class="docs-subtitle">View Recycle Bin</h3>
+              <p class="docs-text">Open the "Recycle Bin" tab in the web application to see all items currently stored. Each entry shows the original path, size, and timestamp.</p>
+
+              <h3 class="docs-subtitle">Empty Recycle Bin</h3>
+              <p class="docs-text">Click "Empty Recycle Bin" to permanently delete all items. This operation requires type-to-confirm ("delete") and cannot be undone.</p>
+
+              <div class="docs-callout docs-callout-warning">
+                <strong>Warning:</strong> Emptying the recycle bin permanently deletes all items. This action cannot be undone.
+              </div>
+            </section>
+
+            <section id="restore" class="docs-section">
+              <h2 class="docs-section-title">Restore</h2>
+              <p class="docs-text">Items in the recycle bin can be restored to their original locations at any time.</p>
+
+              <h3 class="docs-subtitle">Restore Items</h3>
+              <p class="docs-text">In the Recycle Bin tab, click "Restore" next to any item to recover it. The item is moved back to its original path.</p>
+
+              <h3 class="docs-subtitle">CLI Restore</h3>
+              <div class="docs-code-block">
+                <pre><code># List items in recycle bin
+nukelear &lt;directory&gt; --list-trash
+
+# Restore a specific item by id
+nukelear &lt;directory&gt; --restore &lt;id&gt;</code></pre>
+              </div>
+            </section>
+
+            <section id="cli" class="docs-section">
+              <h2 class="docs-section-title">CLI</h2>
+              <p class="docs-text">The CLI provides fast terminal-based cleanup with interactive prompts and flags for automation.</p>
+
+              <h3 class="docs-subtitle">Basic Usage</h3>
+              <div class="docs-code-block">
+                <pre><code>nukelear &lt;directory&gt; [options]</code></pre>
+              </div>
+
+              <h3 class="docs-subtitle">Interactive Mode</h3>
+              <p class="docs-text">Run without flags to enter interactive mode. You'll be prompted to select technologies and directories.</p>
+              <div class="docs-code-block">
+                <pre><code>nukelear ~/Dev</code></pre>
+              </div>
+
+              <h3 class="docs-subtitle">Technology Flags</h3>
+              <div class="docs-code-block">
+                <pre><code># Clean only Node.js dependencies
+nukelear ~/Dev --node
+
+# Clean multiple technologies
+nukelear ~/Dev --node --python
+
+# Clean all supported technologies
+nukelear ~/Dev --node --next --python --vscode --macos</code></pre>
+              </div>
+
+              <h3 class="docs-subtitle">Recycle Bin Commands</h3>
+              <div class="docs-code-block">
+                <pre><code># List recycle bin contents
+nukelear &lt;directory&gt; --list-trash
+
+# Restore item by id
+nukelear &lt;directory&gt; --restore &lt;id&gt;
+
+# Empty recycle bin permanently
+nukelear &lt;directory&gt; --empty-trash</code></pre>
+              </div>
+
+              <h3 class="docs-subtitle">Permanent Deletion</h3>
+              <p class="docs-text">Use <code class="docs-code">--permanent</code> to delete items immediately without moving to the recycle bin.</p>
+              <div class="docs-code-block">
+                <pre><code>nukelear ~/Dev --node --permanent</code></pre>
+              </div>
+
+              <div class="docs-callout docs-callout-warning">
+                <strong>Warning:</strong> Permanent deletion cannot be undone. Use with caution.
+              </div>
+
+              <h3 class="docs-subtitle">Help and Version</h3>
+              <div class="docs-code-block">
+                <pre><code>nukelear --help
+nukelear --version</code></pre>
+              </div>
+            </section>
+
+            <section id="safety" class="docs-section">
+              <h2 class="docs-section-title">Safety</h2>
+              <p class="docs-text">Nukelear includes multiple safety mechanisms to prevent accidental data loss.</p>
+
+              <h3 class="docs-subtitle">Recycle Bin Default</h3>
+              <p class="docs-text">By default, items are moved to the recycle bin rather than permanently deleted. This allows recovery if needed.</p>
+
+              <h3 class="docs-subtitle">Type-to-Confirm</h3>
+              <p class="docs-text">Destructive operations require typing "delete" to confirm. This prevents accidental clicks from causing data loss.</p>
+
+              <h3 class="docs-subtitle">File Preview</h3>
+              <p class="docs-text">You can inspect file contents before cleanup to verify that items are safe to delete.</p>
+
+              <h3 class="docs-subtitle">Size Exclusion</h3>
+              <p class="docs-text">The <code class="docs-code">.git</code> and <code class="docs-code">.nukelear-trash</code> directories are excluded from size calculations and scanning to prevent accidental version control or recycle bin deletion.</p>
+
+              <h3 class="docs-subtitle">Read-Only Preview</h3>
+              <p class="docs-text">File preview operations are strictly read-only. No files are modified, executed, or uploaded during preview.</p>
+
+              <div class="docs-callout docs-callout-info">
+                <strong>Best Practice:</strong> Always review detected items and preview important files before cleanup. Use the recycle bin as a safety net until you're confident items can be permanently deleted.
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container">
+        <h2 class="section-title">Ready to clean your projects?</h2>
+        <p class="section-subtitle">Launch Nukelear and reclaim gigabytes of storage</p>
+        <a href="../nukelear-web.html" class="btn btn-primary btn-large">Launch Nukelear</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">⚛️</div>
+        <div class="footer-tagline">Clean the clutter. Keep the project.</div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Product</h4>
+          <a href="index.html">Home</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="features.html">Features</a>
+          <a href="technologies.html">Technologies</a>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="docs.html">Documentation</a>
+          <a href="https://github.com/joel-patole/Nukelear">GitHub</a>
+        </div>
+        <div class="footer-column">
+          <h4>Project</h4>
+          <a href="about.html">About</a>
+          <a href="../LICENSE">License</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Nukelear. MIT License.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="website.js"></script>
+</body>
+</html>

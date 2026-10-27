@@ -1,6 +1,6 @@
 {
 	"name": "nukelear",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "",
 	"main": "./dist/index.js",
 	"scripts": {
@@ -22,19 +22,19 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ajaykumarn3000/nukelear.git"
+		"url": "https://github.com/joel-patole/Nukelear.git"
 	},
 	"keywords": [
 		"nukelear",
 		"cli",
 		"tools"
 	],
-	"author": {
-		"username": "ajaykumarn3000",
-		"url": "https://ajaykumarn3000.in",
-		"name": "Ajaykumar Nadar",
-		"email": "ajaykumarn3000@gmail.com"
+	"author": "Joel Patole <joelpatole1@gmail.com> (https://github.com/joel-patole)",
+	"bugs": {
+		"url": "https://github.com/joel-patole/Nukelear/issues",
+		"email": "joelpatole1@gmail.com"
 	},
+	"homepage": "https://github.com/joel-patole/Nukelear#readme",
 	"license": "MIT",
 	"type": "module",
 	"packageManager": "pnpm@10.27.0",

@@ -11,9 +11,9 @@ Before you start, please review our [Code of Conduct](./CODE_OF_CONDUCT.md) and
 ## Ways to Contribute
 
 - 🐛 **Bug Reports**: Found a bug?
-  [Open an issue](https://github.com/ajaykumarn3000/nukelear/issues/new?template=bug_report.md)
+  [Open an issue](https://github.com/joel-patole/Nukelear/issues/new?template=bug_report.md)
 - 💡 **Feature Requests**: Have an idea?
-  [Share it with us](https://github.com/ajaykumarn3000/nukelear/issues/new?template=feature_request.md)
+  [Share it with us](https://github.com/joel-patole/Nukelear/issues/new?template=feature_request.md)
 - 📝 **Documentation**: Help improve our documentation
 - 🔧 **Code**: Submit pull requests with improvements or new features
 - 🧪 **Testing**: Help test new features or report edge cases
@@ -215,7 +215,7 @@ When reporting bugs, please include:
 
 ### Creating a Bug Report
 
-1. Check [existing issues](https://github.com/ajaykumarn3000/nukelear/issues) to
+1. Check [existing issues](https://github.com/joel-patole/Nukelear/issues) to
    avoid duplicates
 2. Use the bug report template on GitHub
 3. Provide as much detail as possible
@@ -232,7 +232,7 @@ When suggesting new features:
 ### Creating a Feature Request
 
 1. Use
-   [GitHub Discussions](https://github.com/ajaykumarn3000/nukelear/discussions)
+   [GitHub Discussions](https://github.com/joel-patole/Nukelear/discussions)
    for feature ideas
 2. Describe the use case and problem you're trying to solve
 3. Provide examples of how you'd like to use the feature
@@ -245,16 +245,14 @@ appreciate every contribution, no matter how small! -->
 ## Getting Help
 
 - **GitHub Discussions**:
-  [Ask questions](https://github.com/ajaykumarn3000/nukelear/discussions) about
+  [Ask questions](https://github.com/joel-patole/Nukelear/discussions) about
   development
 - **Existing Issues**: Check
-  [existing issues](https://github.com/ajaykumarn3000/nukelear/issues) for
+  [existing issues](https://github.com/joel-patole/Nukelear/issues) for
   context
 - **Code Review**: Review `index.ts`, `utils.ts`, and `tli.ts` to understand
   patterns
 - **Community**: Join the conversation in issues and pull requests
-- **Email**: Reach out to
-  [ajaykumarn3000@gmail.com](mailto:ajaykumarn3000@gmail.com)
 
 ## Additional Resources
 
